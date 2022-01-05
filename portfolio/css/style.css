@@ -16,7 +16,7 @@ body {
 .container {
 	width: 1440px;
 	margin: 0 auto;
-	border: 1px solid white;
+	/* border: 1px solid white; */
 }
 
 ul {
@@ -26,6 +26,10 @@ ul {
 a {
 	text-decoration: none;
 	color: white;
+}
+
+section {
+	padding: 139px 0 20px ;
 }
 
 /* header styles start */
@@ -44,7 +48,7 @@ a {
 .header-nav {
 	width: 500px;
 	margin-left: 780px;
-	border: 1px solid white;
+	/* border: 1px solid white; */
 }
 
 .header-nav-list {
@@ -52,10 +56,16 @@ a {
 }
 
 .nav-list-link {
-	//border: 1px solid white;
 	margin-left: 30px;
 	font-size: 20px;
 	line-height: 50px;
+}
+
+.nav-list-link:hover,
+.nav-list-link:active,
+.lng-list-link:hover,
+.lng-list-link:active {
+	color: #BDAE82;
 }
 
 .switch-lng {
@@ -65,15 +75,134 @@ a {
 .lng-list {
 	display: flex;
 	justify-content: space-between;
-	border: 1px solid white;
+	/* border: 1px solid white; */
 }
 
 .lng-list-link, 
 .lng-separator {
-	//border: 1px solid white;
+	/* border: 1px solid white; */
 	font-size: 20px;
 	line-height: 50px;
 }
+
+/* header styles end */
+
+/* intro section styles start */
+
+.hero-container{
+	height: 910px;
+	margin-top: -90px;
+	padding-top: 250px;
+	background: url(../assets/img/bg.jpg) no-repeat;
+}
+
+.hero {
+	width: 500px;
+	height: 330px;
+	margin-left: 80px;
+}
+
+.hero-title {
+	margin-bottom: 10px;
+	font-family: Merriweather;
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 120px;
+}
+
+.hero-text {
+	width: 470px;
+	height: 120px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+.btn {
+	width: 220px;
+	height: 55px;
+	padding: 8px 72px 7px 73px;
+	background: #BDAE82;
+	border: 0;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+.btn:hover {
+	color:white;
+}
+
+/* intro section styles end */
+
+/* skills section styles start */
+
+.sills {
+	width: 1440px;
+	height: 482px;
+}
+
+.section-title {
+	width: 700px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.section-title-line {
+	color: #BDAE82;
+	margin: 0;
+}
+
+.section-title > h2 {
+	width: 152px;
+	margin: 0 auto;
+	margin-top: -40px;
+	font-family: Merriweather;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 80px;
+	text-align: center;
+	color: #BDAE82;
+	background: #000;
+}
+
+.skills-items {
+	display: flex;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+	width: 1400px;
+	border: 1px solid white;
+}
+
+.skills-item {
+	width: 320px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border: 1px solid white;
+}
+
+.skills-item-icon {
+	width: 62px;
+	height: 50px;
+	margin-bottom: 50px;
+}
+
+.skills-item-title{
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.skills-item-description {
+	width: 280px;
+	font-size: 18px;
+	line-height: 36px;
+	text-align: center;
+}
+
+/* skills section styles end*/
 
 
 
