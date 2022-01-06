@@ -16,7 +16,7 @@ body {
 .container {
 	width: 1440px;
 	margin: 0 auto;
-	/* border: 1px solid white; */
+	border: 1px solid white;
 }
 
 ul {
@@ -29,7 +29,39 @@ a {
 }
 
 section {
-	padding: 139px 0 20px ;
+	padding: 100px 20px 0;
+}
+
+.section-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+	height: 80px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	border: 1px solid white;
+}
+
+.section-title-line {
+	width: 100%;
+	color: #BDAE82;
+	margin: 0;
+}
+
+.section-title h2 {
+	position: absolute;
+	display: inline;
+	margin: 0 auto;
+	padding: 0 20px;
+	font-family: Merriweather;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 80px;
+	color: #BDAE82;
+	background: #000;
+	border: 1px solid white;
 }
 
 /* header styles start */
@@ -123,7 +155,7 @@ section {
 	height: 55px;
 	padding: 8px 72px 7px 73px;
 	background: #BDAE82;
-	border: 0;
+	border:1px solid #BDAE82;
 	font-size: 20px;
 	line-height: 40px;
 }
@@ -139,30 +171,6 @@ section {
 .sills {
 	width: 1440px;
 	height: 482px;
-}
-
-.section-title {
-	width: 700px;
-	height: 80px;
-	margin: 0 auto;
-}
-
-.section-title-line {
-	color: #BDAE82;
-	margin: 0;
-}
-
-.section-title > h2 {
-	width: 152px;
-	margin: 0 auto;
-	margin-top: -40px;
-	font-family: Merriweather;
-	font-weight: bold;
-	font-size: 40px;
-	line-height: 80px;
-	text-align: center;
-	color: #BDAE82;
-	background: #000;
 }
 
 .skills-items {
@@ -204,5 +212,32 @@ section {
 
 /* skills section styles end*/
 
+/* portfolio section styles start*/
 
+.portfolio-btns {
+	width: 895px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+
+.btn-transparent {	
+	color: #BDAE82;
+	background: none;
+}
+
+.portfolio-items {
+	display: flex;
+	width: 100%;
+	height: 1145px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	border: 1px solid white;
+}
+
+.portfolio-img {
+	width: 450px;
+	height: 560px;
+}
+/* portfolio section styles end*/
 
