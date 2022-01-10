@@ -46,8 +46,10 @@ section {
 
 .section-title-line {
 	width: 100%;
-	color: #BDAE82;
+	border: 0;
 	margin: 0;
+	height: 2px;
+	background: #BDAE82;
 }
 
 .section-title h2 {
@@ -154,7 +156,7 @@ section {
 	width: 220px;
 	height: 55px;
 	background: #BDAE82;
-	border:1px solid #BDAE82;
+	border: 2px solid #BDAE82;
 	font-size: 20px;
 	line-height: 40px;
 }
@@ -262,6 +264,10 @@ section {
 
 /* price section styles start */
 
+.price {
+	padding-bottom: 100px;
+}
+
 .price-items {
 	display: flex;
 	justify-content: space-between;
@@ -272,7 +278,7 @@ section {
 	width: 450px;
 	height: 505px;
 	padding: 43px;
-	border: 2px solid #BDAE82;
+	border: 3px solid #BDAE82;
 	flex-direction: column;
 	align-items: center;
 }
@@ -302,3 +308,62 @@ section {
 }
 
 /* price section styles end */
+
+/* contacts section styles start */
+
+.contacts {
+	height: 700px;
+	display: flex;
+	justify-content: right;
+	background: url(../assets/img/contacts-bg.jpg) no-repeat;
+	background-size: auto 700px;
+  	background-position: center center;
+}
+
+.contacts-container {
+	width: 450px;
+	height: 445px;
+	display: flex;
+	flex-direction: column;
+	/* border: 1px solid white; */
+}
+
+.contacts-title {
+	margin-bottom: 40px;
+	font-family: Merriweather;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 80px;
+	color: #BDAE82;
+}
+
+.contacts input,
+.contacts textarea {
+	width: 100%;
+	padding: 5px 20px;
+	border: 2px solid #BDAE82;
+	font-family: Inter;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 40px;
+	color: #BDAE82;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.contacts input {
+	margin-bottom: 20px;
+}
+
+.contacts textarea {
+	margin-bottom: 30px;
+	resize: none;
+	border-radius: 0;
+}
+
+::placeholder {
+  	font-family: inherit;
+  	font-size: 20px;
+	color: #bdae82;
+}
+
+/* contacts section styles start */
