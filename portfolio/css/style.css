@@ -329,6 +329,7 @@ section {
 }
 
 .contacts-title {
+	margin: 0;
 	margin-bottom: 40px;
 	font-family: Merriweather;
 	font-weight: bold;
@@ -367,3 +368,53 @@ section {
 }
 
 /* contacts section styles start */
+
+/* footer styles start*/
+
+.footer {
+	height: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.footer-data {
+	width: 182px;
+}
+
+.footer span,
+.footer a {
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.footer span {
+	margin-right: 20px;
+}
+
+.footer a:hover,
+.footer a:active {
+	color: #BDAE82;
+}
+
+.social-list {
+	display: flex;
+	list-style: none;
+	border: 0;
+}
+
+.social-item {
+	margin-right: 20px;
+}
+
+.social-item:last-child {
+	margin-right: 0;
+}
+
+.social-link:hover {
+	filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+/* footer styles end*/
