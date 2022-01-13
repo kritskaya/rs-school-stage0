@@ -51,7 +51,24 @@
 	}
 
 	.footer {
+		height: 190px;
+		padding: 28px;
 		flex-direction: column;
+	}
+
+	.footer-data {
+		width: 210px;
+		justify-content: space-around;
+	}
+
+	.footer-data span,
+	.footer-data a,
+	.footer .rss {
+		line-height: 24px;
+	}
+
+	.footer span {
+		margin-right: 0;
 	}
 
 	
