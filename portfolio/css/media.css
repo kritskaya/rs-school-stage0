@@ -50,6 +50,27 @@
 		background-position: center 0;
 	}
 
+	.contacts {
+		height: 600px;
+		padding-top: 60px;
+		background-size: auto 600px;
+	}
+
+	.contacts-container { 
+		height: 429px;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	#contact-form {
+		align-items: center;
+	}
+
+	.contacts-title {
+		font-size: 32px;
+		line-height: 64px;
+	}
+
 	.footer {
 		height: 190px;
 		padding: 28px;
