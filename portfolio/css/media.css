@@ -121,7 +121,6 @@
 		margin-right: 4px;
 		background: url(../assets/svg/hamburger.svg) no-repeat;
 		background-position: center center;
-		/* border: 1px solid white; */
 	}
 
 	.hero-container {
@@ -129,7 +128,6 @@
 		padding-top: 0;
 		background: url(../assets/img/bg-small.jpg) no-repeat;
 		background-position: center 0;
-		/* border: 1px solid white; */
 	}
 		
 	.hero {
@@ -137,10 +135,9 @@
 		height: 100%;
 		margin-left: 0;
 		padding-left: 60px;
+		padding-top: 168px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		/* border: 1px solid white; */
 	}
 
 	.hero-title {
