@@ -34,13 +34,23 @@
 		width: 420px;
 		margin-bottom: 50px;
 	}
+
 }
 
 @media (max-width: 950px) {
+	
 	.portfolio-btns {
 		width: 445px;
 		height: 115px;
 		align-content: space-between;
+	}
+
+	.portfolio-img {
+		margin-bottom: 25px;
+	}
+
+	.portfolio-img:last-child {
+		margin-bottom: 0;
 	}
 
 }
@@ -53,6 +63,14 @@
 
 	.section {
 		padding: 80px 20px;
+	}
+
+	.skills {
+		padding: 80px 20px 0;
+	}
+
+	.portfolio {
+		padding: 80px 0 0;
 	}
 
 	.video {
