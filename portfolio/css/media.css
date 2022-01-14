@@ -55,6 +55,23 @@
 		padding: 80px 20px;
 	}
 
+	.video {
+		padding: 80px 0 0;
+		/* border: 1px solid white; */
+	}
+
+	.play-btn {
+		width: 75px;
+		height: 75px;
+		background-size: contain;
+	}
+
+	.play-btn:hover,
+	.play-btn:active,
+	.play-btn:focus {
+		background-size: contain;
+	}
+
 	.contacts {
 		height: 600px;
 		padding-top: 60px;
