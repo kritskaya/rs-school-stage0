@@ -32,6 +32,7 @@
 
 	.price-item {
 		width: 420px;
+		margin-bottom: 50px;
 	}
 }
 
@@ -48,6 +49,10 @@
 	.hero-container{
 		background: url(../assets/img/bg-small.jpg) no-repeat;
 		background-position: center 0;
+	}
+
+	.section {
+		padding: 80px 20px;
 	}
 
 	.contacts {
