@@ -4,7 +4,15 @@
 	}
 
 	.header-nav {
-		display: none;
+		margin-left: 0;
+		margin-right: 20px;
+		flex-grow: 1;
+		display: flex;
+		justify-content: right;
+	}
+
+	.lng-list-link {
+		font-weight: bold;
 	}
 
 	.skills {
@@ -51,13 +59,11 @@
 }
 
 @media (max-width: 1000px) {
-	
 	.portfolio-btns {
 		width: 445px;
 		height: 115px;
 		align-content: space-between;
 	}
-
 	
 	.portfolio-img {
 		margin-bottom: 25px;
@@ -70,19 +76,70 @@
 }
 
 @media (max-width: 768px) {
-	.hero-container{
-		background: url(../assets/img/bg-small.jpg) no-repeat;
-		background-position: center 0;
-	}
-
 	.section {
 		padding: 80px 20px;
+	}
+
+	.header {
+		padding: 0 60px;
+	}
+	
+	.header-nav-list {
+		display: none;
+	}
+
+	.lng-list-item {
+		margin-right: 9px;
+	}
+	
+	.lng-list-item:last-child {
+		margin-right: 14px;
+	}
+
+	.humburger {
+		display: block;
+		width: 50px;
+		height: 50px;
+		margin-left: 20px;
+		background: url(../assets/svg/hamburger.svg) no-repeat;
+	}
+
+	.hero-container {
+		height: 590px;
+		padding-top: 0;
+		background: url(../assets/img/bg-small.jpg) no-repeat;
+		background-position: center 0;
+		/* border: 1px solid white; */
+	}
+		
+	.hero {
+		width: 100%;
+		height: 100%;
+		margin-left: 0;
+		padding-left: 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		/* border: 1px solid white; */
+	}
+
+	.hero-title {
+		margin-bottom: 20px;
+		font-weight: normal;
+		font-size: 32px;
+		line-height: 64px;
+	}
+
+	.hero-text {
+		width: 390px;
+		height: 72px;
+		margin-bottom: 60px;
+		line-height: 24px;
 	}
 
 	.skills {
 		padding: 80px 20px 0;
 	}
-
 	
 	.portfolio {
 		padding: 80px 0 0;
@@ -146,6 +203,5 @@
 	.footer span {
 		margin-right: 0;
 	}
-
 	
 }
