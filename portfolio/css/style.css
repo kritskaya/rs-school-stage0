@@ -93,6 +93,10 @@ section {
 	margin-left: 780px;
 }
 
+.close-menu-btn {
+	display: none;
+}
+
 .header-nav-list {
 	display: flex;
 }
