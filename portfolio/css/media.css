@@ -251,7 +251,6 @@
 
 	.footer-data {
 		width: 210px;
-		justify-content: space-around;
 	}
 
 	.footer-data span,
@@ -260,8 +259,25 @@
 		line-height: 24px;
 	}
 
-	.footer span {
+	.footer-data span {
 		margin-right: 0;
 	}
-	
+
+	.footer-data span:first-child {
+		margin-left: 18px;
+	}
+
+	.footer-data span:nth-child(2) {
+		margin-left: 20px;
+		margin-right: 3px;
+	}
+
+	.footer-data a {
+		margin-left: 20px;
+	}
+
+	.rss {
+		margin-top: -4px;
+	}
+
 }
