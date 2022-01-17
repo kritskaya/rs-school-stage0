@@ -82,6 +82,7 @@
 
 	.section-title {
 		width: 364px;
+		margin-bottom: 50px;
 	}
 
 	.section-title h2 {
@@ -189,7 +190,16 @@
 
 	.video {
 		padding: 80px 0 0;
-		/* border: 1px solid white; */
+	}
+
+	.video-player {
+		overflow: hidden;
+	}
+
+	.video-player-image {
+		width: 768px;
+		height: 418px;
+		background: url(../assets/img/video-player-small.jpg) no-repeat;
 	}
 
 	.play-btn {
@@ -202,6 +212,10 @@
 	.play-btn:active,
 	.play-btn:focus {
 		background-size: contain;
+	}
+
+	.price {
+		padding: 80px 0;
 	}
 
 	.contacts {
