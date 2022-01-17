@@ -17,12 +17,14 @@
 
 	.skills {
 		height: auto;
+		margin-bottom: -38px;
 	}
 
 	.skills-items {
-   	width: 728px;
-		height: 520px;
+   	/* width: 728px; */
+		height: auto;
 		margin: 0 auto;
+		
 		justify-content: space-around;
 		align-content: space-between;
   	}
@@ -30,6 +32,7 @@
 	.skills-item {
 		width: 320px;
 		height: 224px;
+		margin-bottom: 36px;
 	}
 	
 	.skills-item-description {
@@ -94,12 +97,36 @@
 		padding: 0 60px;
 	}
 	
-	.header-nav-list {
+	.header-nav {
 		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 620px;
+		height: 100%;
+		margin-right: -5px;
+		flex-direction: column;
+		background: black;
+		z-index: 9999;
+		border: 1px solid white;
+	}
+
+	.close-menu-btn {
+		display: block;
+		width: 50px;
+		height: 50px;
+		align-self: flex-end;
+		background: url(../assets/svg/close.svg) no-repeat;
+	}
+
+	.header-nav-list {
+		flex-direction: column;
 	}
 
 	.switch-lng {
 		width: 82px;
+		flex-grow: 1;
+		/* border: 1px solid white; */
 	}
 
 	.lng-list {
@@ -118,16 +145,17 @@
 	}
 	
 	.lng-list-item:last-child {
-		margin-right: 20px;
+		margin-right: 16px;
 	}
 
 	.humburger {
 		display: block;
 		width: 59px;
 		height: 50px;
-		margin-right: 4px;
+		/* margin-right: 4px; */
 		background: url(../assets/svg/hamburger.svg) no-repeat;
 		background-position: center center;
+		/* border: 1px solid white; */
 	}
 
 	.hero-container {
@@ -171,7 +199,7 @@
 
 	.skills-items {
 		padding: 9px 44px 27px 40px;
-		margin-bottom: 13px;
+		margin-bottom: 15gitpx;
 		justify-content: space-between;
 		align-content: space-between;
 	}
