@@ -116,7 +116,7 @@
 		margin-right: 0;
 		flex-direction: column;
 		background: black;
-
+		transition: all 0.5s;
 		/* border: 1px solid white; */
 	}
 
@@ -326,6 +326,12 @@
 
 	.rss {
 		margin-top: -4px;
+	}
+
+	@media (max-width: 740px) {
+		.skills-items {
+			justify-content: center;
+		}
 	}
 
 }
