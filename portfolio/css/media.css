@@ -103,26 +103,30 @@
 	
 	.header {
 		padding: 0 60px;
+		overflow-x: hidden;
 	}
 
 	.header-nav {
-		display: none;
-	}
-	
-	.open {
-		/* display: none; */
-		display: flex;
 		position: fixed;
-		z-index: 9999;
 		top: 0;
-		right: 0;
+		right: -620px;
 		width: 620px;
 		height: 100%;
 		margin-right: 0;
+		padding-top: 134px;
 		flex-direction: column;
 		background: black;
-		transition: all 0.5s;
-		/* border: 1px solid white; */
+		transition: right 0.9s;
+	}
+	
+	.open {
+		display: flex;
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		right: 0;
+				
+		transition: right 0.5s;
 	}
 
 	.close-menu-btn {
@@ -141,7 +145,6 @@
 
 	.header-nav-list {
 		flex-direction: column;
-		/* border: 1px solid white; */
 	}
 
 	.nav-list-item {
@@ -175,17 +178,64 @@
 	}
 	
 	.lng-list-item:last-child {
-		margin-right: 16px;
+		margin-right: 74px;
 	}
 
-	.humburger {
-		display: block;
-		width: 59px;
+	.hamburger {
+		position: absolute;
+		top: 20px;
+		right: 64px;
+		z-index: 2000;
+		display: flex;
+		width: 50px;
 		height: 50px;
-		/* margin-right: 4px; */
-		background: url(../assets/svg/hamburger.svg) no-repeat;
-		background-position: center center;
+		flex-direction: column;
+		justify-content: space-between;
 		cursor: pointer;
+	}
+
+	.hamburger span {
+		display: block;
+		width: 50px;
+		height: 3px;
+		position: relative;
+		background: #cdcdcd;
+		border-radius: 3px;
+						
+		transform-origin: 4px 0px;
+		
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+						background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+						opacity 0.55s ease;
+	}
+
+	.hamburger span:first-child {
+		margin-top: 11px;
+		transform-origin: 0% 0%;
+	}
+
+	.hamburger span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+
+	.hamburger span:last-child {
+		margin-bottom: 11px;
+	}
+
+	.close-btn {
+		opacity: 1;
+		transform: rotate(45deg) scaleX(1.2) translate(-1px, -9px);
+		background: #232323;
+	}
+
+	.close-btn:nth-last-child(2) 	{
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+
+	span.close-btn:last-child 	{
+		opacity: 1;
+		transform: rotate(-45deg) translate(-2px, 6px) scaleX(1.2);
 	}
 
 	.hero-container {

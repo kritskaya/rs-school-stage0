@@ -1,9 +1,14 @@
-const humburger = document.querySelector('.humburger');
+const hamburger = document.querySelector('.hamburger');
+const hamburgerLine = document.querySelectorAll('.hamburger span');
 const menu = document.querySelector('.header-nav');
-humburger.addEventListener('click', () => menu.classList.toggle('open'));
 
-const closeButton = document.querySelector('.close-menu-btn');
-closeButton.addEventListener('click', () => menu.classList.remove('open'));
+hamburger.addEventListener('click', () =>  {
+	menu.classList.toggle('open');
+	hamburgerLine.forEach((el) => {
+		el.classList.toggle('close-btn');
+	});
+});
+
 
 const navLinks = document.querySelectorAll('.nav-list-link');
 navLinks.forEach((el) => el.addEventListener('click', () => menu.classList.remove('open')));
