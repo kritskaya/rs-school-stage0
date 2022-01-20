@@ -93,6 +93,10 @@ section {
 	margin-left: 780px;
 }
 
+.hamburger {
+	display: none;
+}
+
 .close-menu-btn {
 	display: none;
 }
