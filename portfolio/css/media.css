@@ -95,6 +95,11 @@
 		line-height: 40px;
 	}
 
+	.btn {
+		width: 220px;
+		height: 55px;
+	}
+
 	
 	.header {
 		padding: 0 60px;
@@ -214,6 +219,11 @@
 		line-height: 24px;
 	}
 
+	.hero .btn {
+		width: 219px;
+		height: 54px;
+	}
+
 	.skills {
 		padding: 80px 20px 0;
 	}
@@ -245,6 +255,14 @@
 		padding: 80px 0 0;
 	}
 
+	.video-player{
+		/* padding: calc((61.65% - 130px) / 2) calc((100% - 130px) / 2); */
+		background: url("../assets/img/video-player-small.jpg") no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 418px;
+	}
+
 	.video-player-image {
 		width: 768px;
 		height: 418px;
@@ -253,7 +271,8 @@
 	.play-btn {
 		width: 75px;
 		height: 75px;
-		background-size: contain;
+		background-size: 65px 65px;
+		background-position: center center;
 	}
 
 	.play-btn:hover,

@@ -267,8 +267,12 @@ section {
 
 .video-player{
 	display: flex;
+	padding: calc((50.46% - 130px) / 2) calc((100% - 130px) / 2);
 	justify-content: center;
 	align-items: center;
+	background: url("../assets/img/video-player.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .video-player-image {
@@ -276,7 +280,7 @@ section {
 }
 
 .play-btn {
-	position: absolute;
+	/* position: absolute; */
 	width: 130px;
 	height: 130px;
 	border: 0;
