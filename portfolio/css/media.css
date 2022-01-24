@@ -402,7 +402,6 @@
 	@media (max-width: 620px) {
 		.header-nav {
 			width: 100%;
-			display: none;
 		}
 	}
 

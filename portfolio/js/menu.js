@@ -11,6 +11,7 @@ hamburger.addEventListener('click', () =>  {
 
 
 const navLinks = document.querySelectorAll('.nav-list-link');
+
 navLinks.forEach((el) => el.addEventListener('click', () => {
 		menu.classList.remove('open');
 		hamburgerLine.forEach((el) => {
@@ -18,4 +19,5 @@ navLinks.forEach((el) => el.addEventListener('click', () => {
 		});
 	})
 );
+
 
