@@ -14,13 +14,22 @@ const themeElements = [
 ];
 
 const switchThemeBtn = document.querySelector(".switch-theme-link");
+const switchThemeImg = document.querySelector(".switch-theme-img");
 
-switchThemeBtn.addEventListener("click", () => {
+switchThemeBtn.addEventListener("click", (event) => {
+	event.preventDefault();
+
+	if (switchThemeImg.src.indexOf("light") > -1) {
+		switchThemeImg.src = "./assets/svg/dark.svg";
+	} else {
+		switchThemeImg.src = "./assets/svg/light.svg";
+	}
+
 	for(let i = 0; i < themeElements.length; i++) {
 		let elems = document.querySelectorAll(themeElements[i]);
 
 		elems.forEach((elem) => {
 			elem.classList.toggle("light-theme");
-		})
+		});
 	}
 })
