@@ -84,8 +84,7 @@ section {
 .header-logo-link:hover > .header-logo-img,
 .header-logo-link:active > .header-logo-img,
 .header-logo-link:focus > .header-logo-img {
-	filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
+	filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .header-nav {
@@ -150,10 +149,6 @@ section {
 	color: #BDAE82;
 }
 
-.switch-theme-link {
-	
-}
-
 .switch-theme-link:hover img,
 .switch-theme-link:active img
 .switch-theme-link:focus img {
@@ -170,7 +165,7 @@ section {
 
 /* intro section styles start */
 
-.hero-container{
+.hero-container {
 	height: 910px;
 	margin-top: -90px;
 	padding-top: 250px;
@@ -528,3 +523,124 @@ input:-webkit-autofill:active {
 }
 
 /* footer styles end*/
+
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+a.light-theme {
+	color: #000;
+}
+
+a.light-theme:hover {
+	color: #fff;
+}
+
+.btn.light-theme {
+	border: 2px solid #BDAE82;
+	background-color: #BDAE82;
+  	color: #000;
+	transition: 0.5s;
+}
+
+.btn.light-theme:hover {
+	border: 2px solid #000;
+	background-color: #000;
+	color: #BDAE82;
+}
+
+.hero .btn.light-theme,
+.contacts .btn.light-theme {
+	border: 2px solid #fff;
+	background-color: #fff;
+}
+
+
+.hero .btn.light-theme:hover,
+.contacts .btn.light-theme:hover {
+	border: 2px solid #000;
+	background-color: #000;
+}
+
+
+.portfolio .btn.light-theme {
+	border: 2px solid #000;
+	background-color: #000;
+	color: #BDAE82;
+}
+
+.portfolio .btn.light-theme:hover {
+	color: #fff;
+}
+
+.portfolio .btn-transparent.light-theme {
+	border: 2px solid #BDAE82;
+	background-color: #BDAE82;
+  	color: #000;
+}
+
+.portfolio .btn-transparent.light-theme:hover {
+	border: 2px solid #000;
+	background-color: #000;
+  	color: #BDAE82;
+}
+
+.section-title-line.light-theme {
+	background-color: #000;
+}
+
+.section-title h2.light-theme {
+	color: #000;
+	background-color: #fff;
+}
+
+.header-logo-img.light-theme,
+.switch-theme-img.light-theme,
+.social-link.light-theme {
+	filter: brightness(0%);
+}
+
+.header-logo-img.light-theme:hover,
+.switch-theme-img.light-theme:hover,
+.social-link.light-theme:hover {
+	filter: brightness(100%);
+}
+
+.lng-list-item > a.light-theme.active {
+	color: #fff;
+}
+
+
+.light-theme:hover {
+  color: #000;
+}
+
+.hero-container.light-theme {
+	background: url(../assets/img/bg-light.jpg) no-repeat;
+	background-position: center 0;
+}
+
+.contacts.light-theme {
+	background: url(../assets/img/contacts-bg-light.jpg) no-repeat;
+	background-size: auto 700px;
+  	background-position: center center;
+}
+
+.contacts-title.light-theme {
+	color: #000;
+}
+
+.contacts input.light-theme,
+.contacts textarea.light-theme {
+	color: #000;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.light-theme::placeholder {
+	color: #000;
+}
+
+.footer a.light-theme:hover {
+	color: #BDAE82;
+}
