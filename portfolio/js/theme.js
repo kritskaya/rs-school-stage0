@@ -5,6 +5,7 @@ const themeElements = [
 	'.section-title-line',
 	'.section-title h2',
 	'.header-logo-img',
+	'.header-nav',
 	'.switch-theme-img',
 	'.hero-container',
 	'.contacts',

@@ -89,7 +89,6 @@ section {
 
 .header-nav {
 	width: 500px;
-	/* margin-left: 780px; */
 	flex-grow: 1;
 	display: flex;
 	justify-content: right;
@@ -98,10 +97,6 @@ section {
 .hamburger {
 	display: none;
 }
-
-/* .close-menu-btn {
-	display: none;
-} */
 
 .header-nav-list {
 	display: flex;
