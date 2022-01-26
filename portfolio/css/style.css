@@ -192,20 +192,56 @@ section {
 }
 
 .btn {
+	position: relative;
+	z-index: 0;
 	width: 220px;
 	height: 55px;
+	overflow: hidden;
 	background: #BDAE82;
-	border: 2px solid #BDAE82;
+	/* border: 2px solid #BDAE82; */
+	border: none;
 	font-size: 20px;
 	line-height: 40px;
 	cursor: pointer;
-	transition: color 0.5s;
+	transition: 0.5s ease-in-out;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
 	color:white;
+}
+
+.btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	border-right: 40px solid transparent;
+	border-bottom: 55px solid #96854f;
+	transform: translateX(-100%);
+	transition: 0.5s ease-in-out;
+}
+
+.btn.light-theme:before{
+	border-bottom: 55px solid #000;
+}
+
+.btn:hover {
+	/* border-color: #96854f; */
+	background:#96854f;
+}
+
+.btn.light-theme:hover {
+	/* border-color: #BDAE82; */
+	background: black;
+}
+
+.btn:hover:before {
+   transform: translateX(0);
 }
 
 /* intro section styles end */
@@ -263,8 +299,17 @@ section {
 }
 
 .btn-transparent {	
+	border: 2px solid #BDAE82;
 	color: #BDAE82;
 	background: none;
+}
+
+.btn-transparent:hover {
+	border: 2px solid #96854f;
+}
+
+.btn-transparent.light-theme:hover {
+	border: 2px solid #000;
 }
 
 .portfolio-items {
@@ -533,34 +578,34 @@ a.light-theme:hover {
 }
 
 .btn.light-theme {
-	border: 2px solid #BDAE82;
+	/* border: 2px solid #BDAE82; */
 	background-color: #BDAE82;
   	color: #000;
 	transition: 0.5s;
 }
 
 .btn.light-theme:hover {
-	border: 2px solid #000;
+	/* border: 2px solid #000; */
 	background-color: #000;
 	color: #BDAE82;
 }
 
 .hero .btn.light-theme,
 .contacts .btn.light-theme {
-	border: 2px solid #fff;
+	/* border: 2px solid #fff; */
 	background-color: #fff;
 }
 
 
 .hero .btn.light-theme:hover,
 .contacts .btn.light-theme:hover {
-	border: 2px solid #000;
+	/* border: 2px solid #000; */
 	background-color: #000;
 }
 
 
 .portfolio .btn.light-theme {
-	border: 2px solid #000;
+	/* border: 2px solid #000; */
 	background-color: #000;
 	color: #BDAE82;
 }
@@ -570,13 +615,13 @@ a.light-theme:hover {
 }
 
 .portfolio .btn-transparent.light-theme {
-	border: 2px solid #BDAE82;
+	/* border: 2px solid #BDAE82; */
 	background-color: #BDAE82;
   	color: #000;
 }
 
 .portfolio .btn-transparent.light-theme:hover {
-	border: 2px solid #000;
+	/* border: 2px solid #000; */
 	background-color: #000;
   	color: #BDAE82;
 }
