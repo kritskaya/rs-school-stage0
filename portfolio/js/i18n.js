@@ -17,7 +17,12 @@ function translate(event) {
 
 		dateI18nElements.forEach((elem) => {
 			let dataValue = elem.getAttribute("data-i18n");
-			elem.innerHTML = i18Obj[target.innerHTML][dataValue];
+			if (dataValue !== "contact-phone" && dataValue !== "contact-message") {
+				elem.innerHTML = i18Obj[target.innerHTML][dataValue];
+			} else {
+				elem.setAttribute("placeholder", i18Obj[target.innerHTML][dataValue]);
+			}
+			
 		});
 
 		if (event.target.innerHTML === "en") {
