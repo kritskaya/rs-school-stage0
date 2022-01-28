@@ -21,7 +21,7 @@
 	}
 
 	.skills-items {
-   	/* width: 728px; */
+   	width: 728px;
 		height: auto;
 		margin: 0 auto;
 		
@@ -278,6 +278,7 @@
 	}
 
 	.skills-items {
+		width: 100%;
 		padding: 9px 44px 27px 40px;
 		margin-bottom: 15px;
 		justify-content: space-between;

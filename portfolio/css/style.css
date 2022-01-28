@@ -569,6 +569,7 @@ body.light-theme {
   color: #000;
 }
 
+
 a.light-theme {
 	color: #000;
 }
@@ -578,34 +579,29 @@ a.light-theme:hover {
 }
 
 .btn.light-theme {
-	/* border: 2px solid #BDAE82; */
 	background-color: #BDAE82;
   	color: #000;
 	transition: 0.5s;
 }
 
 .btn.light-theme:hover {
-	/* border: 2px solid #000; */
 	background-color: #000;
 	color: #BDAE82;
 }
 
 .hero .btn.light-theme,
 .contacts .btn.light-theme {
-	/* border: 2px solid #fff; */
 	background-color: #fff;
 }
 
 
 .hero .btn.light-theme:hover,
 .contacts .btn.light-theme:hover {
-	/* border: 2px solid #000; */
 	background-color: #000;
 }
 
 
 .portfolio .btn.light-theme {
-	/* border: 2px solid #000; */
 	background-color: #000;
 	color: #BDAE82;
 }
@@ -615,13 +611,11 @@ a.light-theme:hover {
 }
 
 .portfolio .btn-transparent.light-theme {
-	/* border: 2px solid #BDAE82; */
 	background-color: #BDAE82;
   	color: #000;
 }
 
 .portfolio .btn-transparent.light-theme:hover {
-	/* border: 2px solid #000; */
 	background-color: #000;
   	color: #BDAE82;
 }
@@ -661,7 +655,7 @@ a.light-theme:hover {
 	background-position: center 0;
 }
 
-.contacts.light-theme {
+#contacts.light-theme {
 	background: url(../assets/img/contacts-bg-light.jpg) no-repeat;
 	background-size: auto 700px;
   	background-position: center center;
