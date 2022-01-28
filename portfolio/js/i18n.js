@@ -20,6 +20,11 @@ function translate(event) {
 			elem.innerHTML = i18Obj[target.innerHTML][dataValue];
 		});
 
+		if (event.target.innerHTML === "en") {
+			lang = "en";
+		} else {
+			lang = "ru";
+		}
 	}
 }
 

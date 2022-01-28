@@ -17,13 +17,17 @@ const themeElements = [
 const switchThemeBtn = document.querySelector(".switch-theme-link");
 const switchThemeImg = document.querySelector(".switch-theme-img");
 
-switchThemeBtn.addEventListener("click", (event) => {
+switchThemeBtn.addEventListener("click", switchTheme); 
+
+function switchTheme (event) {
 	event.preventDefault();
 
 	if (switchThemeImg.src.indexOf("light") > -1) {
 		switchThemeImg.src = "./assets/svg/dark.svg";
+		theme = "light";
 	} else {
 		switchThemeImg.src = "./assets/svg/light.svg";
+		theme = "dark";
 	}
 
 	for(let i = 0; i < themeElements.length; i++) {
@@ -33,4 +37,4 @@ switchThemeBtn.addEventListener("click", (event) => {
 			elem.classList.toggle("light-theme");
 		});
 	}
-})
+}
