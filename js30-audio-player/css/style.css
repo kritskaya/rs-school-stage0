@@ -12,7 +12,6 @@ body {
 	height: 100%;
 	background: rgb(0, 0, 0); 
 	margin: 0;
-	border: 1px solid red;
 }
 
 .container {
@@ -38,32 +37,30 @@ body {
 }
 
 .player {
-	display: flex;
 	width: 335px;
 	height: 400px;
-	border: 1px solid black;
 	border-radius: 12px;
+	display: flex;
 	flex-direction: column;
+	overflow: hidden;
+	box-shadow: 0 0 10px black;
 }
 
 .cover {
 	width: 100%;
-	height: 270px;
-	border: 1px solid green;
+	height: 267px;
 	background: url(../assets/img/lemonade.png) no-repeat;
-	background-size: cover;
+	background-size: 101% ;
 	background-position: center center;
 }
 
 .controls {
 	width: 100%;
 	flex-grow: 1;
-	background: grey;
-	border: 1px solid yellow;
+	background: linear-gradient(to top right, #404040, grey);
 }
 
 .footer {
 	height: 30px;
 	margin-top: -30px;
-	border: 1px solid blue;
 }
