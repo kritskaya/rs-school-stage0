@@ -21,7 +21,7 @@
 	}
 
 	.skills-items {
-   	/* width: 728px; */
+   	width: 728px;
 		height: auto;
 		margin: 0 auto;
 		
@@ -42,6 +42,11 @@
 	.portfolio-items {
 		height: auto;
 		justify-content: space-around;
+	}
+
+	.portfolio-img:nth-child(1),
+	.portfolio-img:nth-child(3) {
+		margin-bottom: 25px;
 	}
 
 	.video-player-image {
@@ -114,6 +119,10 @@
 		background: black;
 		transition: right 0.9s;
 	}
+
+	.header-nav.light-theme {
+		background: white;
+	}
 	
 	.open {
 		display: flex;
@@ -124,21 +133,7 @@
 				
 		transition: right 0.5s;
 	}
-
-	.close-menu-btn {
-		display: block;
-		width: 50px;
-		height: 50px;
-		margin: 20px 64px 64px 0;
-		align-self: flex-end;
-		background: url(../assets/svg/close.svg) no-repeat;
-		cursor: pointer;
-	}
-
-	.close-menu-btn img {
-		cursor: pointer;
-	}
-
+	
 	.header-nav-list {
 		flex-direction: column;
 	}
@@ -162,7 +157,6 @@
 		display: flex;
 		justify-content: flex-end;
 	}
-
 	
 	.lng-list-item:first-child {
 		margin-right: 9px;
@@ -173,8 +167,8 @@
 		font-weight: bold;
 	}
 	
-	.lng-list-item:last-child {
-		margin-right: 74px;
+	.switch-theme {
+		margin-right: 85px;
 	}
 
 	.hamburger {
@@ -240,6 +234,11 @@
 		background: url(../assets/img/bg-small.jpg) no-repeat;
 		background-position: center 0;
 	}
+
+	.hero-container.light-theme {
+		background: url(../assets/img/bg-small-light.jpg) no-repeat;
+		background-position: center 0;
+	}
 		
 	.hero {
 		width: 100%;
@@ -279,6 +278,7 @@
 	}
 
 	.skills-items {
+		width: 100%;
 		padding: 9px 44px 27px 40px;
 		margin-bottom: 15px;
 		justify-content: space-between;
