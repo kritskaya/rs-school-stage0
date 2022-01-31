@@ -56,8 +56,37 @@ body {
 
 .controls {
 	width: 100%;
+	padding: 15px 30px 5px;
 	flex-grow: 1;
 	background: linear-gradient(to top right, #404040, grey);
+}
+
+.btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.play-btn {
+	width: 50px;
+	height: 50px;
+	filter: invert(1);
+	transition: 0.3s;
+}
+
+.play-btn:hover {
+	filter: invert(0.80);
+}
+
+.next-prev-btns {
+	display: flex;
+	flex-direction: column;
+}
+
+.prev-btn,
+.next-btn {
+	width: 30px;
+	height: 30px;
 }
 
 .footer {
