@@ -36,7 +36,6 @@ body {
 	min-height: 100%;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid white;
 }
 
 .player {
@@ -60,11 +59,14 @@ body {
 .controls {
 	width: 100%;
 	padding: 15px 30px 5px;
+	display: flex;
+	flex-direction: column;
 	flex-grow: 1;
 	background: linear-gradient(to top right, #404040, grey);
 }
 
 .btns {
+	margin-bottom: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -90,11 +92,66 @@ body {
 .next-btn {
 	width: 30px;
 	height: 30px;
+	filter: invert(1);
+	transition: 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+	filter: invert(0.80);
+}
+
+.prev-btn {
+	margin-bottom: 3px;
 }
 
 .artist {
 	font-size: 20px;
 	font-weight: 800;
+	color: #c8f542;
+}
+
+.track-name {
+	font-size: 17px;
+	color: #fff;
+}
+
+.duration {
+	width: 215px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+
+.duration-time,
+.current-time {
+	font-size: 13px;
+}
+
+.duration-time {
+	margin-bottom: 2px;
+	align-self: flex-end;
+	color: #c8f542;
+}
+
+.current-time {
+	margin-top: 2px;
+	color: #fff;
+}
+
+.progress-bar {
+	-webkit-appearance: none;
+	height: 5px;
+	border-radius: 3px;
+	background: #fff;
+}
+
+.progress-bar::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 8px;
+	height: 10px;
+	border-radius: 50%;
+	background: #c8f542;
 }
 
 .footer {
