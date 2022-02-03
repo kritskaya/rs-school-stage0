@@ -1,6 +1,7 @@
 
 const audio = document.querySelector('audio');
 const playBtn = document.querySelector('.play-btn');
+let played = false;
 
 const durationSpan = document.querySelector('.duration-time');
 durationSpan.textContent = getTimeFromNumber(audio.duration);
@@ -22,12 +23,25 @@ progressBar.max = Math.floor(audio.duration);
 progressBar.step = 1;
 
 
+progressBar.addEventListener("input", () => {
+	audio.pause();
+	audio.currentTime = progressBar.value;
+});
+
+progressBar.addEventListener("change", () => {
+	if (played) {
+		audio.play();
+	}
+});
+
 function playAudio() {
 	audio.play();
+	played = true;
 }
 
 function pauseAudio() {
 	audio.pause();
+	played = false;
 }
 
 setInterval(() => {
