@@ -1,37 +1,44 @@
 
 const audio = document.querySelector('audio');
 const playBtn = document.querySelector('.play-btn');
-let played = false;
-
 
 const durationSpan = document.querySelector('.duration-time');
-durationSpan.innerHTML = getTimeFromNumber(audio.duration);
+durationSpan.textContent = getTimeFromNumber(audio.duration);
 
 playBtn.addEventListener("click", function () {
 	
-	if (!played) {
+	if (audio.paused) {
 		playBtn.src = "./assets/svg/pause.png";
 		playAudio();
-		played = true;
 	} else {
 		pauseAudio();
-		played = false;
 		playBtn.src = "./assets/svg/play.png";
 	}
 });
 
+const progressBar = document.querySelector('.progress-bar');
+progressBar.min = 0;
+progressBar.max = Math.floor(audio.duration);
+progressBar.step = 1;
+
+
 function playAudio() {
-  audio.currentTime = 0;
-  audio.play();
+	audio.play();
 }
 
 function pauseAudio() {
-  audio.pause();
+	audio.pause();
 }
 
+setInterval(() => {
+	const currentTime = document.querySelector(".current-time");
+	currentTime.textContent = getTimeFromNumber(audio.currentTime);
+	progressBar.value = audio.currentTime;
+}, 500);
 
 function getTimeFromNumber(number) {
 	let minDuration = Math.floor(number / 60);
-	let secDuration = Math.floor(number % 60);
-	return minDuration + ":" + secDuration;
+	let secDuration = "0" + Math.floor(number % 60);
+	return minDuration + ":" + secDuration.slice(-2);
 }
+
