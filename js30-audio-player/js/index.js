@@ -3,11 +3,9 @@ const audio = document.querySelector('audio');
 const playBtn = document.querySelector('.play-btn');
 let played = false;
 
-let minDuration = Math.floor(audio.duration / 60);
-let secDuration = Math.floor(audio.duration % 60);
 
 const durationSpan = document.querySelector('.duration-time');
-durationSpan.innerHTML = minDuration + ":" + secDuration;
+durationSpan.innerHTML = getTimeFromNumber(audio.duration);
 
 playBtn.addEventListener("click", function () {
 	
@@ -29,4 +27,11 @@ function playAudio() {
 
 function pauseAudio() {
   audio.pause();
+}
+
+
+function getTimeFromNumber(number) {
+	let minDuration = Math.floor(number / 60);
+	let secDuration = Math.floor(number % 60);
+	return minDuration + ":" + secDuration;
 }
