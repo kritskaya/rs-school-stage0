@@ -54,6 +54,7 @@ body {
 	background: url(../assets/img/lemonade.png) no-repeat;
 	background-size: 101% ;
 	background-position: center center;
+	transition: ease-in-out 0.7s;
 }
 
 .controls {

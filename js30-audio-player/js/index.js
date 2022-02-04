@@ -68,6 +68,7 @@ progressBar.addEventListener("change", () => {
 
 function playAudio() {
 	playBtn.src = "./assets/svg/pause.png";
+	cover.style.backgroundSize = "115%";
 
 	audio.play();
 	played = true;
@@ -78,6 +79,7 @@ function pauseAudio() {
 	played = false;
 
 	playBtn.src = "./assets/svg/play.png";
+	cover.style.backgroundSize = "100%";
 }
 
 setInterval(() => {
