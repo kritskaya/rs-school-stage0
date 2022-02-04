@@ -1,13 +1,22 @@
 
-const audio = document.querySelector('audio');
+//const audio = document.querySelector('audio');
+const audio = new Audio("../assets/audio/" + playlist[0].path);
 const playBtn = document.querySelector('.play-btn');
 let played = false;
 
 const durationSpan = document.querySelector('.duration-time');
-durationSpan.textContent = getTimeFromNumber(audio.duration);
+const progressBar = document.querySelector('.progress-bar');
 
-playBtn.addEventListener("click", function () {
+audio.addEventListener("loadeddata", () => {
+	durationSpan.textContent = getTimeFromNumber(audio.duration);
 	
+	progressBar.min = 0;
+	progressBar.max = Math.floor(audio.duration);
+	progressBar.step = 1;
+})
+
+
+playBtn.addEventListener("click", () => {
 	if (audio.paused) {
 		playBtn.src = "./assets/svg/pause.png";
 		playAudio();
@@ -16,12 +25,6 @@ playBtn.addEventListener("click", function () {
 		playBtn.src = "./assets/svg/play.png";
 	}
 });
-
-const progressBar = document.querySelector('.progress-bar');
-progressBar.min = 0;
-progressBar.max = Math.floor(audio.duration);
-progressBar.step = 1;
-
 
 progressBar.addEventListener("input", () => {
 	audio.pause();
