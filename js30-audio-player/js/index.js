@@ -5,7 +5,7 @@ const audio = new Audio("../assets/audio/" + playlist[0].path);
 
 const playBtn = document.querySelector(".play-btn");
 const nextBtn = document.querySelector(".next-btn");
-
+const prevBtn = document.querySelector(".prev-btn");
 
 const cover = document.querySelector(".cover");
 const artist = document.querySelector(".artist");
@@ -45,6 +45,7 @@ function playPause() {
 }
 
 nextBtn.addEventListener("click", nextTrack);
+prevBtn.addEventListener("click", previousTrack);
 
 function nextTrack() {
 	if (currentTrackNum === playlist.length - 1) currentTrackNum = -1;
@@ -52,7 +53,14 @@ function nextTrack() {
 	pauseAudio();
 	audio.src = "../assets/audio/" + playlist[++currentTrackNum].path;
 	playAudio();
+}
 
+function previousTrack() {
+	if (currentTrackNum === 0) currentTrackNum = playlist.length;
+
+	pauseAudio();
+	audio.src = "../assets/audio/" + playlist[--currentTrackNum].path;
+	playAudio();
 }
 
 progressBar.addEventListener("input", () => {
