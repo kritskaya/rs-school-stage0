@@ -32,6 +32,7 @@ audio.addEventListener("loadeddata", () => {
 
 audio.addEventListener("ended", () => {
 	pauseAudio();
+	nextTrack();
 })
 
 playBtn.addEventListener("click", playPause);
