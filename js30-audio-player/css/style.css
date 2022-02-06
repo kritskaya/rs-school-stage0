@@ -202,15 +202,18 @@ body {
 
 .footer {
 	height: 40px;
-	/* margin-top: -40px; */
 	padding: 0 50px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
 .rss img {
 	height: 30px;
+}
+
+.github {
+	margin: 0 50px;
 }
 
 .github a {
