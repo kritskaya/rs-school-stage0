@@ -10,5 +10,11 @@ const playlist = [
 		track: "Don't Start Now",
 		cover: "dontstartnow.png",
 		path: "dontstartnow.mp3"
+	},
+	{
+		artist: "Adel",
+		track: "Hello",
+		cover: "hello.jpg",
+		path: "adel.mp3"
 	}
 ];

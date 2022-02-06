@@ -15,6 +15,7 @@ body {
 	background: rgb(0, 0, 0); 
 	margin: 0;
 	font-family: "Montserrat";
+	color: #fff;
 }
 
 .background {
@@ -38,7 +39,8 @@ body {
 	align-items: center;
 }
 
-.player {
+.player,
+.playlist {
 	width: 335px;
 	height: 400px;
 	border-radius: 12px;
@@ -46,6 +48,10 @@ body {
 	flex-direction: column;
 	overflow: hidden;
 	box-shadow: 0 0 10px black;
+}
+
+.player {
+	margin-right: 30px;
 }
 
 .cover {
@@ -155,6 +161,23 @@ body {
 	background: #c8f542;
 }
 
+.playlist-track {
+	height: 70px;
+	padding: 10px 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+}
+
+.playlist-track.active p {
+	color: #c8f542;
+}
+
+.pl-track-cover img {
+	height: 40px;
+	margin-right: 10px;
+}
+
 .footer {
 	height: 40px;
 	margin-top: -40px;
@@ -162,7 +185,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #fff;
 }
 
 .rss img {

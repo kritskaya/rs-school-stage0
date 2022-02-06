@@ -52,6 +52,11 @@ function nextTrack() {
 
 	pauseAudio();
 	audio.src = "../assets/audio/" + playlist[++currentTrackNum].path;
+
+	document.querySelector(".playlist-track.active").classList.remove("active");
+	let playlistTrack = document.querySelector(`.playlist-track:nth-child(${currentTrackNum + 1})`);
+	playlistTrack.classList.add("active");
+	
 	playAudio();
 }
 
@@ -60,6 +65,11 @@ function previousTrack() {
 
 	pauseAudio();
 	audio.src = "../assets/audio/" + playlist[--currentTrackNum].path;
+
+	document.querySelector(".playlist-track.active").classList.remove("active");
+	let playlistTrack = document.querySelector(`.playlist-track:nth-child(${currentTrackNum + 1})`);
+	playlistTrack.classList.add("active");
+
 	playAudio();
 }
 
@@ -100,5 +110,37 @@ function getTimeFromNumber(number) {
 	let minDuration = Math.floor(number / 60);
 	let secDuration = "0" + Math.floor(number % 60);
 	return minDuration + ":" + secDuration.slice(-2);
+}
+
+window.onload = () => {
+	let trackNode = document.querySelector(".playlist-track");
+	
+	const playlistImg  = trackNode.querySelector("img");
+	playlistImg.src = `../assets/img/${playlist[0].cover}`;
+
+	const playlistArtist = trackNode.querySelector(".pl-track-artist");
+	playlistArtist.textContent = playlist[0].artist;
+
+	const playlistTrackName = trackNode.querySelector(".pl-track-name");
+	playlistTrackName.textContent = playlist[0].track;
+
+	for (let i = 1; i < playlist.length; i++) {
+		let clone = trackNode.cloneNode(true);
+
+		const playlistImg  = clone.querySelector("img");
+		playlistImg.src = `../assets/img/${playlist[i].cover}`;
+
+		const playlistArtist = clone.querySelector(".pl-track-artist");
+		playlistArtist.textContent = playlist[i].artist;
+
+		const playlistTrackName = clone.querySelector(".pl-track-name");
+		playlistTrackName.textContent = playlist[i].track;
+
+		trackNode.after(clone);
+		trackNode = clone;
+	}
+
+	let firstTrack = document.querySelector(".playlist-track");
+	firstTrack.classList.add("active");
 }
 
