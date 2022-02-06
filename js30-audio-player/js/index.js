@@ -47,6 +47,8 @@ function playPause() {
 nextBtn.addEventListener("click", nextTrack);
 prevBtn.addEventListener("click", previousTrack);
 
+const container = document.querySelector(".container");
+
 function nextTrack() {
 	if (currentTrackNum === playlist.length - 1) currentTrackNum = -1;
 
@@ -56,7 +58,15 @@ function nextTrack() {
 	document.querySelector(".playlist-track.active").classList.remove("active");
 	let playlistTrack = document.querySelector(`.playlist-track:nth-child(${currentTrackNum + 1})`);
 	playlistTrack.classList.add("active");
-	
+
+	const first = document.querySelector(".tracks");
+	if (currentTrackNum === 0) first.style.marginTop = 0;
+	if (playlist.length > 5) {
+		if (currentTrackNum > 3 && currentTrackNum !== playlist.length - 1) {
+			first.style.marginTop = -70 * (currentTrackNum - 3) + "px";
+		}
+	}
+				
 	playAudio();
 }
 
@@ -69,6 +79,17 @@ function previousTrack() {
 	document.querySelector(".playlist-track.active").classList.remove("active");
 	let playlistTrack = document.querySelector(`.playlist-track:nth-child(${currentTrackNum + 1})`);
 	playlistTrack.classList.add("active");
+
+	const first = document.querySelector(".tracks");
+	if (currentTrackNum === 0) first.style.marginTop = 0;
+	
+	if (playlist.length > 5) {
+		if (currentTrackNum > 3 && currentTrackNum !== playlist.length - 1) {
+			first.style.marginTop = -70 * (currentTrackNum - 3) + "px";
+		} else if (currentTrackNum === playlist.length - 1) {
+			first.style.marginTop = -70 * (currentTrackNum - 4) + "px";
+		}
+	}
 
 	playAudio();
 }

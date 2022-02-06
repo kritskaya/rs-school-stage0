@@ -150,7 +150,7 @@ body {
 	-webkit-appearance: none;
 	height: 5px;
 	border-radius: 3px;
-	background: #fff;
+	background: #000;
 }
 
 .progress-bar::-webkit-slider-thumb {
@@ -161,12 +161,28 @@ body {
 	background: #c8f542;
 }
 
+.playlist {
+	padding: 25px 10px;
+}
+
+.container {
+	overflow: hidden;
+}
+
+.tracks {
+	transition: ease-in-out 0.7s;
+}
+
 .playlist-track {
 	height: 70px;
-	padding: 10px 20px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 20px 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 	display: flex;
 	align-items: center;
+}
+
+.playlist-track:last-child {
+	border-bottom: none;
 }
 
 .playlist-track.active p {
