@@ -16,6 +16,9 @@ body {
 	margin: 0;
 	font-family: "Montserrat";
 	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
 }
 
 .background {
@@ -34,9 +37,9 @@ body {
 
 .main {
 	display: flex; 
-	min-height: 100%;
 	justify-content: center;
 	align-items: center;
+	flex-grow: 1;
 }
 
 .player,
@@ -197,7 +200,7 @@ body {
 
 .footer {
 	height: 40px;
-	margin-top: -40px;
+	/* margin-top: -40px; */
 	padding: 0 50px;
 	display: flex;
 	justify-content: space-between;
