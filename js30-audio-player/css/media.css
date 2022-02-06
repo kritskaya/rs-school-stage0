@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+		padding-top: 20px
+	}
+
+	.background {
+		border: 1px solid red;
+	}
+
+	body {
+		border: 1px solid green;
+	}
+
+	.player {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
