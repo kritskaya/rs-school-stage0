@@ -62,6 +62,19 @@ body {
 	flex-grow: 1;
 }
 
+.container {
+	padding: 30px 20px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.gallery-image {
+	width: 375px;
+	height: 210px;
+	margin-bottom: 30px;
+}
+
 .footer {
 	height: 60px;
 	padding: 0 50px;
