@@ -1,6 +1,3 @@
-
-//const audio = document.querySelector('audio');
-
 const audio = new Audio("../assets/audio/" + playlist[0].path);
 
 const playBtn = document.querySelector(".play-btn");
@@ -33,7 +30,7 @@ audio.addEventListener("loadeddata", () => {
 audio.addEventListener("ended", () => {
 	pauseAudio();
 	nextTrack();
-})
+});
 
 playBtn.addEventListener("click", playPause);
 

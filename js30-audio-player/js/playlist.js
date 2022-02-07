@@ -1,5 +1,11 @@
 const playlist = [
 	{
+		artist: "Adel",
+		track: "Hello",
+		cover: "hello.jpg",
+		path: "adel.mp3"
+	},
+	{
 		artist: "Beyonce",
 		track: "Don't Hurt Yourself",
 		cover: "lemonade.png",
@@ -11,12 +17,7 @@ const playlist = [
 		cover: "dontstartnow.png",
 		path: "dontstartnow.mp3"
 	},
-	{
-		artist: "Adel",
-		track: "Hello",
-		cover: "hello.jpg",
-		path: "adel.mp3"
-	},
+	
 	{
 		artist: "Red Hot Chilly Papers",
 		track: "Californication",
