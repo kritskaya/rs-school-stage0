@@ -17,8 +17,9 @@ const container = document.querySelector(".main .container");
 
 const addImage = (url) => {
 	let image = document.createElement('div');
-	image.classList.add("gallery-image");
+	
 	image.style.backgroundImage = `url(${url})`;
+	image.classList.add("gallery-image");
 	
 	container.append(image);
 }
