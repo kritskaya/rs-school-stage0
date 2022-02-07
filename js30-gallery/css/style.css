@@ -1,8 +1,8 @@
 @import "font.css";
 
 *,
-*:after,
-*:before {
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -16,12 +16,14 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	font-family: 'Montserrat';
+	font-family: 'Inter';
 }
 
 .header {
 	height: 60px;
+	padding: 10px 50px;
 	display: flex;
+	justify-content: space-between;
 	background: #000;
 }
 
@@ -29,9 +31,35 @@ body {
 	display: flex;
 }
 
+.search-block {
+	display: flex;
+	position: relative;
+}
+
+.search-icon {
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+
+.search-input {
+	width: 300px;
+	padding: 0 20px 0 50px;
+	box-sizing: border-box;
+	border: 1px solid #000; 
+	border-radius: 5px;
+	outline: none;
+	font-family: inherit;
+	font-size: 18px;
+	background-color: #fff;
+	background-clip: padding-box;
+	
+}
+
 .main {
 	flex-grow: 1;
-	border: 1px solid red;
 }
 
 .footer {
