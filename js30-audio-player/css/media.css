@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+		padding-top: 20px
+	}
+
+	.player {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
