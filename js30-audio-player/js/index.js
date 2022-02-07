@@ -1,4 +1,4 @@
-const audio = new Audio("../assets/audio/" + playlist[0].path);
+const audio = new Audio("./assets/audio/" + playlist[0].path);
 
 const playBtn = document.querySelector(".play-btn");
 const nextBtn = document.querySelector(".next-btn");
@@ -16,8 +16,8 @@ let currentTrackNum = 0;
 let played = false;
 
 audio.addEventListener("loadeddata", () => {
-	cover.style.backgroundImage = `url(../assets/img/${playlist[currentTrackNum].cover})`;
-	background.style.backgroundImage = `url(../assets/img/${playlist[currentTrackNum].cover})`;
+	cover.style.backgroundImage = `url(./assets/img/${playlist[currentTrackNum].cover})`;
+	background.style.backgroundImage = `url(./assets/img/${playlist[currentTrackNum].cover})`;
 	artist.textContent = playlist[currentTrackNum].artist;
 	track.textContent = playlist[currentTrackNum].track;
 	durationSpan.textContent = getTimeFromNumber(audio.duration);
@@ -51,7 +51,7 @@ function nextTrack() {
 	if (currentTrackNum === playlist.length - 1) currentTrackNum = -1;
 
 	pauseAudio();
-	audio.src = "../assets/audio/" + playlist[++currentTrackNum].path;
+	audio.src = "./assets/audio/" + playlist[++currentTrackNum].path;
 
 	document.querySelector(".playlist-track.active").classList.remove("active");
 	let playlistTrack = document.querySelector(`.playlist-track:nth-child(${currentTrackNum + 1})`);
@@ -72,7 +72,7 @@ function previousTrack() {
 	if (currentTrackNum === 0) currentTrackNum = playlist.length;
 
 	pauseAudio();
-	audio.src = "../assets/audio/" + playlist[--currentTrackNum].path;
+	audio.src = "./assets/audio/" + playlist[--currentTrackNum].path;
 
 	document.querySelector(".playlist-track.active").classList.remove("active");
 	let playlistTrack = document.querySelector(`.playlist-track:nth-child(${currentTrackNum + 1})`);
