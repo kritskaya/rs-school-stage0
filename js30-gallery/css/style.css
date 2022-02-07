@@ -1,0 +1,56 @@
+@import "font.css";
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Montserrat';
+}
+
+.header {
+	height: 60px;
+	display: flex;
+	background: #000;
+}
+
+.logo {
+	display: flex;
+}
+
+.main {
+	flex-grow: 1;
+	border: 1px solid red;
+}
+
+.footer {
+	height: 40px;
+	padding: 0 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rss img {
+	height: 30px;
+}
+
+.github {
+	margin: 0 50px;
+}
+
+.github a {
+	color: #fff;
+	text-decoration: none;
+}
