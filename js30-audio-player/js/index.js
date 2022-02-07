@@ -135,7 +135,7 @@ window.onload = () => {
 	let trackNode = document.querySelector(".playlist-track");
 	
 	const playlistImg  = trackNode.querySelector("img");
-	playlistImg.src = `../assets/img/${playlist[0].cover}`;
+	playlistImg.src = `./assets/img/${playlist[0].cover}`;
 
 	const playlistArtist = trackNode.querySelector(".pl-track-artist");
 	playlistArtist.textContent = playlist[0].artist;
@@ -147,7 +147,7 @@ window.onload = () => {
 		let clone = trackNode.cloneNode(true);
 
 		const playlistImg  = clone.querySelector("img");
-		playlistImg.src = `../assets/img/${playlist[i].cover}`;
+		playlistImg.src = `./assets/img/${playlist[i].cover}`;
 
 		const playlistArtist = clone.querySelector(".pl-track-artist");
 		playlistArtist.textContent = playlist[i].artist;
