@@ -10,7 +10,8 @@ export const subscribeSearchInput = () => {
 }
 
 export async function getData(keyword) {
-		
+	clearData();
+	
 	const url = `https://api.unsplash.com/search/photos?query=${keyword}&per_page=30&orientation=landscape&client_id=m5rdFYPyYCesIEQg2bMvsLOIEZwBhK5nw2W7FrjsCn8`;
 	const res = await fetch(url);
 	let data = await res.json();
@@ -25,7 +26,11 @@ export async function getData(keyword) {
 
 const container = document.querySelector(".main .container");
 
-
+const clearData = () => {
+	container.querySelectorAll("*").forEach((element) => {
+		element.remove();
+	})
+}
 
 const addImage = (url) => {
 	let image = document.createElement('div');
