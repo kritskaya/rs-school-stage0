@@ -30,7 +30,10 @@ body {
 }
 
 .logo {
+	line-height: 40px;
+	font-size: 26px;
 	display: flex;
+	color: #fff;
 }
 
 .search-block {
@@ -78,7 +81,8 @@ body {
 	margin-bottom: 30px;
 	background-size: 100%;
 	background-position: center;
-	transition: 0.5s;
+	transition: 0.7s;
+	cursor: pointer;
 }
 
 .gallery-image:hover {

@@ -1,3 +1,9 @@
 import {getData} from "./loadImages.js";
 
-getData();
+window.onload = () => {
+	getData();
+
+	const searchInput = document.querySelector(".search-input");
+	searchInput.focus();
+
+}
