@@ -1,5 +1,6 @@
 
-import { subscribeSearchInput, getData} from "./search.js";
+import {subscribeSearchInput, subscribeSearchBtn, getData} 
+		from "./search.js";
 
 window.onload = () => {
 	getData("spring");
@@ -8,5 +9,6 @@ window.onload = () => {
 	searchInput.focus();
 
 	subscribeSearchInput();
+	subscribeSearchBtn();
 
 }

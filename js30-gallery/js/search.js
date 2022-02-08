@@ -1,4 +1,5 @@
 const searchInput = document.querySelector(".search-input");
+const searchBtn = document.querySelector(".search-icon");
 
 export const subscribeSearchInput = () => {
 	searchInput.addEventListener("keydown", (event) => {
@@ -6,7 +7,14 @@ export const subscribeSearchInput = () => {
 			let keyword = searchInput.value;
 			getData(keyword);
 		}
-	})
+	});
+}
+
+export const subscribeSearchBtn = () => {
+	searchBtn.addEventListener("click", () => {
+		let keyword = searchInput.value;
+		getData(keyword);
+	});
 }
 
 export async function getData(keyword) {
@@ -22,7 +30,7 @@ export async function getData(keyword) {
 		addImage(element.urls.regular);
 	});
 
-};
+}
 
 const container = document.querySelector(".main .container");
 
