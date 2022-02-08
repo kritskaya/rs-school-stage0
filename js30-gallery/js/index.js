@@ -1,9 +1,12 @@
-import {getData} from "./loadImages.js";
+
+import { subscribeSearchInput, getData} from "./search.js";
 
 window.onload = () => {
-	getData();
+	getData("spring");
 
 	const searchInput = document.querySelector(".search-input");
 	searchInput.focus();
+
+	subscribeSearchInput();
 
 }
