@@ -16,5 +16,4 @@ window.onload = () => {
 	subscribeSearchInput();
 	subscribeSearchBtn();
 	subscribeClearBtn();
-
 }

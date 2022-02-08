@@ -77,6 +77,8 @@ body {
 .main {
 	padding-top: 60px;
 	flex-grow: 1;
+	width: 1280px;
+	margin: 0 auto;
 }
 
 .container {
@@ -84,6 +86,13 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	
+}
+
+.container::after {
+  content: "";
+  width: 375px;
+  
 }
 
 .gallery-image {
@@ -94,11 +103,21 @@ body {
 	background-position: center;
 	transition: 0.7s;
 	cursor: pointer;
+	
 }
 
 .gallery-image:hover {
 	background-size: 120%; 
 }
+
+/* .container::after {
+	content: " ";
+	display: block;
+	width: 375px;
+	height: 210px;
+	flex-grow: 1;
+	border: 2px solid red;
+} */
 
 .footer {
 	height: 60px;
@@ -127,3 +146,4 @@ body {
 	color: #fff;
 	text-decoration: none;
 }
+
