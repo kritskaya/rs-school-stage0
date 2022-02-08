@@ -1,5 +1,6 @@
 const searchInput = document.querySelector(".search-input");
 const searchBtn = document.querySelector(".search-icon");
+const clearBtn = document.querySelector(".clear-btn");
 
 export const subscribeSearchInput = () => {
 	searchInput.addEventListener("keydown", (event) => {
@@ -8,12 +9,26 @@ export const subscribeSearchInput = () => {
 			getData(keyword);
 		}
 	});
+
+	searchInput.addEventListener("input", () => {
+		if (searchInput.value) {
+			clearBtn.style.display = "block";
+		} else {
+			clearBtn.style.display = "none";
+		}
+	});
 }
 
 export const subscribeSearchBtn = () => {
 	searchBtn.addEventListener("click", () => {
 		let keyword = searchInput.value;
 		getData(keyword);
+	});
+}
+
+export const subscribeClearBtn = () => {
+	clearBtn.addEventListener("click", () => {
+		searchInput.value = "";
 	});
 }
 
