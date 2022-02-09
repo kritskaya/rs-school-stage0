@@ -12,6 +12,7 @@ const imageView = (event) => {
 		image.style.backgroundImage = target.style.backgroundImage;
 		image.classList.add("image-view");
 		gallery.append(image);
+		
 		gallery.removeEventListener("click", imageView);
 		gallery.addEventListener("click", removeImageView);
 	}

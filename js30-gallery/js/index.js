@@ -7,8 +7,6 @@ import {
 } 
 	from "./search.js";
 
-// import {subscribeImageClick} from "./imageView.js";
-
 window.onload = () => {
 	getData("spring");
 
@@ -18,5 +16,4 @@ window.onload = () => {
 	subscribeSearchInput();
 	subscribeSearchBtn();
 	subscribeClearBtn();
-	// subscribeImageClick();
 }
