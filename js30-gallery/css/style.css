@@ -101,6 +101,7 @@ body {
 	margin-bottom: 30px;
 	background-size: 100%;
 	background-position: center;
+	background-repeat: no-repeat;
 	transition: 0.7s;
 	cursor: pointer;
 	
@@ -110,14 +111,19 @@ body {
 	background-size: 120%; 
 }
 
-/* .container::after {
-	content: " ";
-	display: block;
-	width: 375px;
-	height: 210px;
-	flex-grow: 1;
-	border: 2px solid red;
-} */
+.image-view {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	width: 90%;
+	height: 70%;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: translate(-50%, -50%);
+	transition: ease-in-out 2s;
+}
 
 .footer {
 	height: 60px;

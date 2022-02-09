@@ -1,3 +1,5 @@
+import { subscribeImageClick } from "./imageView.js";
+
 const searchInput = document.querySelector(".search-input");
 const searchBtn = document.querySelector(".search-icon");
 const clearBtn = document.querySelector(".clear-btn");
@@ -45,6 +47,7 @@ export async function getData(keyword) {
 		addImage(element.urls.regular);
 	});
 
+	subscribeImageClick();
 }
 
 const container = document.querySelector(".main .container");
