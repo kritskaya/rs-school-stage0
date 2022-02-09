@@ -128,6 +128,7 @@ body {
 	background-repeat: no-repeat;
 	transform: translate(-50%, -50%);
 	transition: 0.7s;
+	animation: showBlock 0.4s ease-in-out;
 }
 
 .footer {
@@ -156,5 +157,14 @@ body {
 .github a {
 	color: #fff;
 	text-decoration: none;
+}
+
+@keyframes showBlock {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 70%;
+	}
 }
 
