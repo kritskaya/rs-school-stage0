@@ -1,0 +1,15 @@
+@media (max-width: 1300px) {
+	.main {
+		width: 850px;
+	}
+}
+
+@media (max-width: 860px) {
+	.main {
+		width: 400px;
+	}
+
+	.container {
+		justify-content: center;
+	}
+}
