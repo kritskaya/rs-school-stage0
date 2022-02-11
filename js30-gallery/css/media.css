@@ -1,0 +1,42 @@
+@media (max-width: 1220px) {
+	.main {
+		width: 850px;
+	}
+}
+
+@media (max-width: 870px) {
+	.logo {
+		line-height: 40px;
+		font-size: 20px;
+		display: flex;
+		color: #fff;
+	}
+
+	.main {
+		width: 620px;
+	}
+
+	.gallery-image {
+		width: 300px;
+		height: 165px;
+	}
+}
+
+@media (max-width: 640px) {
+	.logo p {
+		display: none;
+	}
+
+	.main {
+		width: 400px;
+	}
+
+	.container {
+		justify-content: center;
+	}
+
+	.gallery-image {
+		width: 375px;
+		height: 210px;
+	}
+}
