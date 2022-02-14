@@ -1,3 +1,10 @@
+@font-face {
+	font-family: "Inter";
+	src: 
+		url("../assets/fonts/inter-v7-latin_cyrillic-regular.woff2") format("woff2"),
+		url("../assets/fonts/inter-v7-latin_cyrillic-regular.woff") format("woff");
+
+}
 *,
 *::after,
 *::before {
@@ -10,6 +17,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	font-family: "Inter";
 }
 
 .main {
