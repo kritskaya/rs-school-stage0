@@ -1,10 +1,13 @@
-const cards = document.querySelectorAll(".card");
+const gameField = document.querySelector(".game");
 
 export const subscribeCardClick = () => {
-	cards.forEach ((elem) => elem.addEventListener("click", flipCard));
+	gameField.addEventListener("click", flipCard);
 }
 
-function flipCard() {
-	this.classList.toggle("flip");
+function flipCard(event) {
+	if (event.target.classList.contains("back")) {
+		let flipCard = event.target.parentElement;
+		flipCard.classList.toggle("flip");
+	}
 }
 
