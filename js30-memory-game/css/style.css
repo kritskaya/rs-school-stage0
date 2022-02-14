@@ -38,12 +38,33 @@ body {
 .game {
 	display: grid;
 	grid-template-columns: repeat(5, 100px);
-	grid-template-rows: repeat(4, 130px);
+	grid-template-rows: repeat(4, 100px);
 	grid-gap: 20px;
 }
 
 .card {
 	border: 1px solid #000;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(1);
+	transition: transform .5s;
+}
+
+.back,
+.front {
+	width: 98px;
+	position: absolute;
+}
+
+.front {
+	display: none;
+}
+
+.card.flip {
+	transform: rotateY(180deg);
+	border: 3px solid blue;
 }
 
 .results {

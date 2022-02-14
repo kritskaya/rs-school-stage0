@@ -1,4 +1,5 @@
+import { subscribeCardClick } from "./playProcess.js";
 
 window.onload = () => {
-	alert("123");
+	subscribeCardClick();
 }
