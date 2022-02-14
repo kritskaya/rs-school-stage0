@@ -22,6 +22,32 @@ body {
 
 .main {
 	flex-grow: 1;
+	display: flex;
+}
+
+.container {
+	width: 800px;
+	min-height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.game {
+	display: grid;
+	grid-template-columns: repeat(5, 100px);
+	grid-template-rows: repeat(4, 130px);
+	grid-gap: 20px;
+}
+
+.card {
+	border: 1px solid #000;
+}
+
+.results {
+	display: none;
 }
 
 .footer {
@@ -45,4 +71,5 @@ body {
 
 .rss img {
    height: 30px;
+	filter: invert(100%);
 }
