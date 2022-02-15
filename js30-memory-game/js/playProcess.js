@@ -1,3 +1,5 @@
+import cards from "./cards.js";
+
 const gameField = document.querySelector(".game");
 
 export const subscribeCardClick = () => {
@@ -21,4 +23,5 @@ function flipCard(event) {
 		flipCard.classList.toggle("flip");
 	}
 }
+
 
