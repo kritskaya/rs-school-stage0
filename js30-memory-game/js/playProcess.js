@@ -1,27 +1,49 @@
 import cards from "./cards.js";
 
 const gameField = document.querySelector(".game");
+let gameHasFlipped = null;
+let gameHasFlippedPair = null;
+let countSteps = 0;
+let countFlippedPair = 0;
 
 export const subscribeCardClick = () => {
 	gameField.addEventListener("click", flipCard);
-
-	const cards = document.querySelectorAll('.memory-card');
-	cards.forEach(card => card.addEventListener('click', () => {
-		flipCard.classList.toggle("flip");
-	}));
 }
 
 function flipCard(event) {
 	if (event.target.classList.contains("back")) {
-		let flipCard = event.target.parentElement;
-		flipCard.classList.toggle("flip");
+		if (!gameHasFlippedPair) {
+			let flipCard = event.target.parentElement;
+			flipCard.classList.toggle("flip");
+			
+			if (gameHasFlipped) {
+				gameHasFlippedPair = flipCard;
+				setTimeout(match, 1500);
+			} else {
+				gameHasFlipped = flipCard;
+			}
+		} 
+	}
+}
+
+const match = () => {
+	countSteps++;
+
+	if (gameHasFlipped.getAttribute("data-card") === 
+			gameHasFlippedPair.getAttribute("data-card")) {
+		countFlippedPair++;
+
+		if(countFlippedPair === 10){
+			gameField.removeEventListener("click", flipCard);
+			alert("Игра закончена!");
+		}
+	} else {
+		gameHasFlipped.classList.remove("flip");
+		gameHasFlippedPair.classList.remove("flip");
 	}
 
-	
-	if (event.target.classList.contains("back-face")) {
-		let flipCard = event.target.parentElement;
-		flipCard.classList.toggle("flip");
-	}
+	gameHasFlipped = null;
+	gameHasFlippedPair = null;
 }
 
 export const generateGame = () => {
@@ -51,6 +73,7 @@ export const generateGame = () => {
 const insertCell = (card) => {
 	const cell = document.createElement("div");
 	cell.classList.add("card");
+	cell.setAttribute("data-card", card.name);
 
 	const front = document.createElement("img");
 	front.src = "./assets/png/" + card.path;
