@@ -1,5 +1,6 @@
-import { subscribeCardClick } from "./playProcess.js";
+import { generateGame, subscribeCardClick } from "./playProcess.js";
 
 window.onload = () => {
+	generateGame();
 	subscribeCardClick();
 }

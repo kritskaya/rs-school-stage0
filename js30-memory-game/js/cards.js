@@ -1,4 +1,4 @@
-cards = [
+const cards = [
 	{
 		name: "auto-test",
 		path: "auto-test-icon.png"
