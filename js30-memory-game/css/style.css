@@ -48,24 +48,25 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transform: scale(1);
-	transition: transform .5s;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+
+.card.flip {
+	transform: rotateY(180deg);
 }
 
 .back,
 .front {
 	width: 98px;
 	position: absolute;
+	backface-visibility: hidden;
 }
 
 .front {
-	display: none;
+	transform: rotateY(180deg);
 }
 
-.card.flip {
-	transform: rotateY(180deg);
-	border: 3px solid blue;
-}
 
 .results {
 	display: none;
