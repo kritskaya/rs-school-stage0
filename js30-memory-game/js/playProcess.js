@@ -1,4 +1,5 @@
 import cards from "./cards.js";
+import {saveResult} from "./gameResults.js";
 
 const gameField = document.querySelector(".game");
 let gameHasFlipped = null;
@@ -35,7 +36,8 @@ const match = () => {
 
 		if(countFlippedPair === 10){
 			gameField.removeEventListener("click", flipCard);
-			alert("Игра закончена!");
+			alert("Игра закончена! ");
+			saveResult(countSteps);
 		}
 	} else {
 		gameHasFlipped.classList.remove("flip");
@@ -66,8 +68,6 @@ export const generateGame = () => {
 			insertCell(randomCard);
 		}
 	}
-
-	console.log(gameCards);
 }
 
 const insertCell = (card) => {
