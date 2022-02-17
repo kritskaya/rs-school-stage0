@@ -2,6 +2,8 @@ import cards from "./cards.js";
 import {saveResult} from "./gameResults.js";
 
 const gameField = document.querySelector(".game");
+const restartBtn = document.querySelector(".restart");
+
 let gameHasFlipped = null;
 let gameHasFlippedPair = null;
 let countSteps = 0;
@@ -9,6 +11,7 @@ let countFlippedPair = 0;
 
 export const subscribeCardClick = () => {
 	gameField.addEventListener("click", flipCard);
+	restartBtn.addEventListener("click", () => document.location.reload());
 }
 
 function flipCard(event) {
