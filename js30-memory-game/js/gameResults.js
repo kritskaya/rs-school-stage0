@@ -1,3 +1,7 @@
+const showResultsBtn = document.querySelector(".show-results");
+const resultsSection = document.querySelector(".results");
+const closeResultsBtn = document.querySelector(".close-btn");
+
 export const saveResult = (steps) => {
 	let results = getResults();
 	let result = {};
@@ -6,9 +10,6 @@ export const saveResult = (steps) => {
 	result.steps = steps;
 
 	if (results.length === 10) {
-		// let oldResult = results.reduce((prev, item, index) => prev.date > item.date ? item : prev);
-		// let oldResultIndex = results.findIndex((item) => item === oldResult);
-		// results.splice(oldResultIndex, 1);
 		results.shift();
 	}
 
@@ -26,9 +27,23 @@ export const getResults = () => {
 }
 
 const sortResults = (results) => {
-	
-	results.sort((item1, item2) => item1.steps - item2 - steps);
+	results.sort((item1, item2) => item1.steps - item2.steps);
 }
 
+export const subscribeShowResultsBtn = () => {
+	showResultsBtn.addEventListener("click", showResultsTable);
+}
+
+const showResultsTable = () => {
+	resultsSection.classList.add("active");
+}
+
+export const subscribeCloseResultsBtn = () => {
+	closeResultsBtn.addEventListener("click", closeResultsTable);
+}
+
+const closeResultsTable = () => {
+	resultsSection.classList.remove("active");
+}
 
 

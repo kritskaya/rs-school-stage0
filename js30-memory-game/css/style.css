@@ -75,6 +75,47 @@ body {
 
 .results {
 	display: none;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.results.active {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.table {
+	width: 500px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	border: 3px solid green;
+}
+
+.table > .caption {
+	align-self: center;
+	color: #fff;
+}
+
+.table .data {
+	border: 1px solid #000;
+}
+
+.close-btn {
+	width: 30px;
+	align-self: end;
+	filter: invert(100%);
+	transition: filter 0.3s;
+}
+
+.close-btn:hover {
+	filter: invert(70%);
 }
 
 .footer {
@@ -99,4 +140,5 @@ body {
 .rss img {
    height: 30px;
 	filter: invert(100%);
+	z-index: 0;
 }

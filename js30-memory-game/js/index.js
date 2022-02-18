@@ -1,8 +1,10 @@
 import { generateGame, subscribeCardClick } from "./playProcess.js";
+import { subscribeShowResultsBtn, subscribeCloseResultsBtn } from "./gameResults.js";
 
 window.onload = () => {
 	generateGame();
 	subscribeCardClick();
 	
-	console.log(JSON.parse(localStorage.getItem("memory-game-results")));
+	subscribeShowResultsBtn();
+	subscribeCloseResultsBtn();
 }
