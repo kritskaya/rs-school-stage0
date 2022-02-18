@@ -44,9 +44,10 @@ body {
 }
 
 .card {
-	border: 1px solid #000;
 	position: relative;
 	display: flex;
+	border: 1px solid #000;
+	background-image: linear-gradient(black, grey);
 	justify-content: center;
 	align-items: center;
 	transform-style: preserve-3d;
@@ -69,6 +70,8 @@ body {
 }
 
 .btn {
+	width: 150px;
+	padding: 10px;
 	border: 1px solid #000;
 	background: none;
 }
@@ -96,7 +99,7 @@ body {
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
-	border: 3px solid green;
+	border: 1px solid #000;
 	color: #fff;
 }
 
@@ -106,9 +109,6 @@ body {
 	color: #fff;
 }
 
-.table .data {
-	/* border: 1px solid #000; */
-}
 
 .data-row {
 	padding: 15px 20px;
