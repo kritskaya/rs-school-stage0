@@ -8,6 +8,8 @@ let gameHasFlipped = null;
 let gameHasFlippedPair = null;
 let countSteps = 0;
 let countFlippedPair = 0;
+let startGameTime;
+let endGameTime;
 
 export const subscribeCardClick = () => {
 	gameField.addEventListener("click", flipCard);
@@ -15,6 +17,8 @@ export const subscribeCardClick = () => {
 }
 
 function flipCard(event) {
+	if (!startGameTime) startGameTime = Date.now();
+	
 	if (event.target.classList.contains("back")) {
 		if (!gameHasFlippedPair) {
 			let flipCard = event.target.parentElement;
@@ -39,8 +43,9 @@ const match = () => {
 
 		if(countFlippedPair === 10){
 			gameField.removeEventListener("click", flipCard);
+			endGameTime = Date.now();
 			alert("Игра закончена! ");
-			saveResult(countSteps);
+			saveResult(countSteps, endGameTime - startGameTime);
 		}
 	} else {
 		gameHasFlipped.classList.remove("flip");
@@ -93,4 +98,5 @@ const insertCell = (card) => {
 
 	gameField.append(cell);
 }
+
 

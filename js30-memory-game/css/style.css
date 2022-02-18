@@ -93,18 +93,38 @@ body {
 .table {
 	width: 500px;
 	height: 600px;
+	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	border: 3px solid green;
+	color: #fff;
 }
 
 .table > .caption {
+	margin-bottom: 20px;
 	align-self: center;
 	color: #fff;
 }
 
 .table .data {
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
+}
+
+.data-row {
+	padding: 15px 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.data-row:last-child{
+	border-bottom: none;
+}
+
+.data-row span {
+	margin-right: 10px;
+}
+
+.data-row span:last-child {
+	margin-right: 0;
 }
 
 .close-btn {
