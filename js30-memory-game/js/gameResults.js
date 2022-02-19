@@ -90,10 +90,10 @@ const sortResults = (results) => {
 const getDate = (seconds) => {
 	const date = new Date(seconds);
 	const year = date.getFullYear();
-	const month = ("0" + date.getMonth()).substring(-2, 2);
+	const month = ("0" + (date.getMonth() + 1)).substr(-2, 2);
 	const day = date.getDate();
 	const hours = date.getHours();
-	const minutes = date.getMinutes();
+	const minutes = ("0" + date.getMinutes()).substr(-2, 2);
 	return `${day}.${month}.${year} ${hours}:${minutes}`;
 }
 
@@ -109,6 +109,6 @@ const getTime = (time) => {
 		minutes += " min ";
 	}
 
-	seconds = time + " s";
-	return minutes ? minutes + seconds : seconds;
+	seconds = ("0" + time).substr(-2, 2) + " s";
+	return minutes ? minutes + ": " + seconds : seconds;
 }
