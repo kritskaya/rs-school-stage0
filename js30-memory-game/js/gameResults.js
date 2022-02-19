@@ -51,6 +51,7 @@ const generateResultsTable = () => {
 	sortResults(results);
 	
 	resultsData.innerHTML = "";
+	let lastGameDate = getLastGameDate(results);
 
 	for (let i = 0; i < 10; i++) {
 		let resultRow = document.createElement("div");
@@ -72,8 +73,25 @@ const generateResultsTable = () => {
 		resultDate.textContent = getDate(results[i].date);
 		resultRow.append(resultDate);
 
+		if (results[i].date === lastGameDate) {
+			let lastGame = document.createElement("span");
+			lastGame.classList.add("last-game");
+			lastGame.textContent = "last game";
+			resultRow.append(lastGame);
+		}
+
 		resultsData.append(resultRow);
 	}
+}
+
+const getLastGameDate = (results) => {
+	let lastGameDate = 0;
+
+	results.forEach((item) =>  {
+		if (item.date > lastGameDate) 
+			lastGameDate = item.date;
+	});
+	return lastGameDate;
 }
 
 const sortResults = (results) => {
