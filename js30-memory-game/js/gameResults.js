@@ -17,8 +17,7 @@ export const saveResult = (steps, time) => {
 	}
 
 	results.push(result);
-	
-	
+		
 	localStorage.setItem("memory-game-results", JSON.stringify(results));
 }
 
@@ -78,7 +77,14 @@ const generateResultsTable = () => {
 }
 
 const sortResults = (results) => {
-	results.sort((item1, item2) => item1.steps - item2.steps);
+	results.sort((item1, item2) => {
+		if (item1.steps !== item2.steps) {
+			return item1.steps - item2.steps;
+		} else {
+			return item1.time -item2.time;
+		}
+	});
+	
 }
 
 const getDate = (seconds) => {
