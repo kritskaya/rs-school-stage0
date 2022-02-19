@@ -54,9 +54,13 @@ body {
 	background-color: #fff;
 	box-shadow: -3px -3px 8px #404242, 2px 2px 8px #070808;
 	transform-style: preserve-3d;
-	transition: transform 0.5s;
+	transition: transform 0.5s border 0.3s;
 	-webkit-user-select: none;
 	user-select: none;
+}
+
+.card:hover {
+	border: 2px solid #2c2c2c;
 }
 
 .card.flip {
@@ -84,7 +88,7 @@ body {
 	font-size: 17px;
 	background: none;
 	background-color: black;
-	color: #bddb21;
+	color: #fff;
 }
 
 .btn:hover,
@@ -185,15 +189,20 @@ body {
 
 .github a {
 	text-decoration: none;
-	color: white;
+	color: #bddb21;
+	transform: 0.5s;
 }
 
 .github a:hover {
-	color: #bddb21;
+	color: #fff;
 }
 
 .rss img {
    height: 30px;
 	filter: invert(100%);
 	z-index: 0;
+}
+
+.rss img:hover {
+	filter: invert(80%);
 }
