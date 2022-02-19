@@ -26,7 +26,7 @@ function flipCard(event) {
 			
 			if (gameHasFlipped) {
 				gameHasFlippedPair = flipCard;
-				setTimeout(match, 1500);
+				setTimeout(match, 700);
 			} else {
 				gameHasFlipped = flipCard;
 			}

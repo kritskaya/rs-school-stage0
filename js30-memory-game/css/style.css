@@ -49,13 +49,14 @@ body {
 	display: flex;
 	/* border: 1px solid #000; */
 	border-radius: 5px;
-	/* background-image: linear-gradient(black, grey); */
 	justify-content: center;
 	align-items: center;
 	background-color: #fff;
+	box-shadow: -3px -3px 8px #404242, 2px 2px 8px #070808;
 	transform-style: preserve-3d;
 	transition: transform 0.5s;
-	box-shadow: -3px -3px 8px #404242, 2px 2px 8px #070808;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .card.flip {
@@ -68,6 +69,8 @@ body {
 	position: absolute;
 	backface-visibility: hidden;
 	border-radius: 5px;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .front {
