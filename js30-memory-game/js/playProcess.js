@@ -4,6 +4,10 @@ import {saveResult} from "./gameResults.js";
 const gameField = document.querySelector(".game");
 const restartBtn = document.querySelector(".restart");
 
+const flipSnd = new Audio("./assets/sounds/keyclick.mp3");
+const matchSnd = new Audio("./assets/sounds/match.mp3");
+const gameOverSnd = new Audio("./assets/sounds/gameover.mp3");
+
 let gameHasFlipped = null;
 let gameHasFlippedPair = null;
 let countSteps = 0;
@@ -23,10 +27,11 @@ function flipCard(event) {
 		if (!gameHasFlippedPair) {
 			let flipCard = event.target.parentElement;
 			flipCard.classList.toggle("flip");
+			flipSnd.play();
 			
 			if (gameHasFlipped) {
 				gameHasFlippedPair = flipCard;
-				setTimeout(match, 700);
+				match();
 			} else {
 				gameHasFlipped = flipCard;
 			}
@@ -40,20 +45,37 @@ const match = () => {
 	if (gameHasFlipped.getAttribute("data-card") === 
 			gameHasFlippedPair.getAttribute("data-card")) {
 		countFlippedPair++;
-
+		
 		if(countFlippedPair === 10){
 			gameField.removeEventListener("click", flipCard);
 			endGameTime = Date.now();
-			alert("Игра закончена! ");
+			gameOverSnd.play();
+			
+			setTimeout(gameOver, 2500);
 			saveResult(countSteps, endGameTime - startGameTime);
+
+		} else {
+			setTimeout(() => matchSnd.play(), 400);
 		}
+
+		gameHasFlipped = null;
+		gameHasFlippedPair = null;
 	} else {
-		gameHasFlipped.classList.remove("flip");
-		gameHasFlippedPair.classList.remove("flip");
+		setTimeout(unFlip, 700);
 	}
 
+}
+
+const unFlip = () => {
+	gameHasFlipped.classList.remove("flip");
+	gameHasFlippedPair.classList.remove("flip");
 	gameHasFlipped = null;
 	gameHasFlippedPair = null;
+}
+
+const gameOver = () => {
+	alert(`Game over! in ${countSteps} steps
+See your result in a Result Table`);
 }
 
 export const generateGame = () => {

@@ -47,20 +47,19 @@ body {
 .card {
 	position: relative;
 	display: flex;
-	/* border: 1px solid #000; */
 	border-radius: 5px;
 	justify-content: center;
 	align-items: center;
 	background-color: #fff;
 	box-shadow: -3px -3px 8px #404242, 2px 2px 8px #070808;
 	transform-style: preserve-3d;
-	transition: transform 0.5s border 0.3s;
+	transition: transform 0.5s;
 	-webkit-user-select: none;
 	user-select: none;
 }
 
 .card:hover {
-	border: 2px solid #2c2c2c;
+	border: 1px solid #2c2c2c;
 }
 
 .card.flip {
@@ -81,6 +80,12 @@ body {
 	transform: rotateY(180deg);
 }
 
+.btns {
+	width: 320px;
+	display: flex;
+	justify-content: space-between;
+}
+
 .btn {
 	width: 150px;
 	padding: 10px;
@@ -89,6 +94,7 @@ body {
 	background: none;
 	background-color: black;
 	color: #fff;
+	transition: border-color 0.2s;
 }
 
 .btn:hover,
@@ -163,7 +169,6 @@ body {
 
 .close-btn {
 	width: 23px;
-	/* margin-bottom: 10px; */
 	align-self: end;
 	filter: invert(100%);
 	transition: filter 0.3s;
@@ -190,11 +195,12 @@ body {
 .github a {
 	text-decoration: none;
 	color: #bddb21;
-	transform: 0.5s;
+	transition: 0.3s;
 }
 
 .github a:hover {
-	color: #fff;
+	color: #869c16;
+	;
 }
 
 .rss img {
