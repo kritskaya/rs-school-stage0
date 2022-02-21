@@ -3,6 +3,7 @@ import {saveResult} from "./gameResults.js";
 
 const gameField = document.querySelector(".game");
 const restartBtn = document.querySelector(".restart");
+const volumeBtn = document.querySelector(".volume-img");
 
 const flipSnd = new Audio("./assets/sounds/click.mp3");
 const matchSnd = new Audio("./assets/sounds/match.mp3");
@@ -14,6 +15,7 @@ let countSteps = 0;
 let countFlippedPair = 0;
 let startGameTime;
 let endGameTime;
+let muted = false;
 
 export const subscribeCardClick = () => {
 	gameField.addEventListener("click", flipCard);
@@ -121,4 +123,18 @@ const insertCell = (card) => {
 	gameField.append(cell);
 }
 
+export const subscribeVolumeBtn = () => {
+	volumeBtn.addEventListener("click", () => {
+		flipSnd.muted = !muted;
+		matchSnd.muted = !muted;
+		gameOverSnd.muted = !muted;
+		muted = !muted;
+
+		if (muted) {
+			volumeBtn.src = "./assets/svg/mute.svg";
+		} else {
+			volumeBtn.src = "./assets/svg/volume.svg";
+		}
+	});
+}
 
