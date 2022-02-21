@@ -1,7 +1,7 @@
 const showResultsBtn = document.querySelector(".show-results");
 const resultsSection = document.querySelector(".results");
-const closeResultsBtn = document.querySelector(".close-btn");
-const resultsData = document.querySelector(".table .data");
+const closeResultsBtn = document.querySelector(".results .close-btn");
+const resultsData = document.querySelector(".results .data");
 
 export const saveResult = (steps, time) => {
 	let results = getResults();

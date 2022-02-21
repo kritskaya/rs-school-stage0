@@ -1,4 +1,4 @@
-import { generateGame, subscribeCardClick, subscribeVolumeBtn } from "./playProcess.js";
+import { generateGame, subscribeCardClick, subscribeCloseGameOverBtn, subscribeVolumeBtn } from "./playProcess.js";
 import { subscribeShowResultsBtn, subscribeCloseResultsBtn } from "./gameResults.js";
 
 window.onload = () => {
@@ -8,4 +8,6 @@ window.onload = () => {
 	subscribeShowResultsBtn();
 	subscribeCloseResultsBtn();
 	subscribeVolumeBtn();
+
+	subscribeCloseGameOverBtn();
 }

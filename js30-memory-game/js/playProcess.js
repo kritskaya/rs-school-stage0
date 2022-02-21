@@ -4,6 +4,9 @@ import {saveResult} from "./gameResults.js";
 const gameField = document.querySelector(".game");
 const restartBtn = document.querySelector(".restart");
 const volumeBtn = document.querySelector(".volume-img");
+const gameOverSection = document.querySelector(".game-over");
+const gameResult = document.querySelector(".game-over .data");
+const closeGameOverBtn = document.querySelector(".game-over .close-btn");
 
 const flipSnd = new Audio("./assets/sounds/click.mp3");
 const matchSnd = new Audio("./assets/sounds/match.mp3");
@@ -20,6 +23,12 @@ let muted = false;
 export const subscribeCardClick = () => {
 	gameField.addEventListener("click", flipCard);
 	restartBtn.addEventListener("click", () => document.location.reload());
+}
+
+export const subscribeCloseGameOverBtn = () => {
+	closeGameOverBtn.addEventListener("click", () => {
+		gameOverSection.classList.remove("active");
+	});
 }
 
 function flipCard(event) {
@@ -53,7 +62,7 @@ const match = () => {
 			endGameTime = Date.now();
 			gameOverSnd.play();
 			
-			setTimeout(gameOver, 2500);
+			setTimeout(gameOver, 2000);
 			saveResult(countSteps, endGameTime - startGameTime);
 
 		} else {
@@ -76,8 +85,10 @@ const unFlip = () => {
 }
 
 const gameOver = () => {
-	alert(`Игра закончена! за ${countSteps} шагов
-Ваш результат сохранён в таблице Результаты`);
+	gameOverSection.classList.add("active");
+
+	gameResult.textContent = `За ${countSteps} шаг(ов). Результат сохранёт в таблицу рекордов`;
+	gameResult.style.textAlign = "center";
 }
 
 export const generateGame = () => {
@@ -137,4 +148,6 @@ export const subscribeVolumeBtn = () => {
 		}
 	});
 }
+
+
 

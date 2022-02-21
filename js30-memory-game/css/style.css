@@ -115,7 +115,6 @@ body {
 .btn-volume {
 	width: 50px;
 	height: 50px;
-	/* filter: invert(100%); */
 }
 
 .volume-img {
@@ -123,12 +122,17 @@ body {
 	filter: invert(73%) sepia(68%) saturate(504%) hue-rotate(20deg) brightness(99%) contrast(96%);
 }
 
+.game-over {
+	display: none;
+}
+
 .results {
 	display: none;
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.results.active {
+.results.active,
+.game-over.active {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -141,8 +145,6 @@ body {
 }
 
 .table {
-	width: 520px;
-	height: 600px;
 	padding: 10px; 
 	border: 2px solid #707575;
 	outline: 2px solid #000;
@@ -150,7 +152,16 @@ body {
 	flex-direction: column;
 	background-color: #191a1a;
 	color: #fff;
+}
 
+.results .table {
+	width: 520px;
+	height: 600px;
+}
+
+.game-over .table {
+	width: 420px;
+	height: 200px;
 }
 
 .table > .caption {
