@@ -53,34 +53,43 @@ const generateResultsTable = () => {
 	resultsData.innerHTML = "";
 	let lastGameDate = getLastGameDate(results);
 
-	for (let i = 0; i < 10; i++) {
-		let resultRow = document.createElement("div");
-		resultRow.classList.add("data-row");
+	if (results.length === 0) {
+		let noResults = document.createElement("div");
+		noResults.textContent = "Не сыграно ни одной игры";
+		noResults.style.textAlign = "center";
+		resultsData.append(noResults);
 
-		let resultId = document.createElement("span");
-		resultId.textContent = i + 1 + ".";
-		resultRow.append(resultId);
+	} else {
 
-		let resultSteps = document.createElement("span");
-		resultSteps.textContent = results[i].steps + " шагов";
-		resultRow.append(resultSteps);
+		for (let i = 0; i < 10; i++) {
+			let resultRow = document.createElement("div");
+			resultRow.classList.add("data-row");
 
-		let resultTime = document.createElement("span");
-		resultTime.textContent = results[i].time ? getTime(results[i].time) : "-";
-		resultRow.append(resultTime);
+			let resultId = document.createElement("span");
+			resultId.textContent = i + 1 + ".";
+			resultRow.append(resultId);
 
-		let resultDate = document.createElement("span");
-		resultDate.textContent = getDate(results[i].date);
-		resultRow.append(resultDate);
+			let resultSteps = document.createElement("span");
+			resultSteps.textContent = results[i].steps + " шагов";
+			resultRow.append(resultSteps);
 
-		if (results[i].date === lastGameDate) {
-			let lastGame = document.createElement("span");
-			lastGame.classList.add("last-game");
-			lastGame.textContent = "последняя игра";
-			resultRow.append(lastGame);
+			let resultTime = document.createElement("span");
+			resultTime.textContent = results[i].time ? getTime(results[i].time) : "-";
+			resultRow.append(resultTime);
+
+			let resultDate = document.createElement("span");
+			resultDate.textContent = getDate(results[i].date);
+			resultRow.append(resultDate);
+
+			if (results[i].date === lastGameDate) {
+				let lastGame = document.createElement("span");
+				lastGame.classList.add("last-game");
+				lastGame.textContent = "последняя игра";
+				resultRow.append(lastGame);
+			}
+
+			resultsData.append(resultRow);
 		}
-
-		resultsData.append(resultRow);
 	}
 }
 
