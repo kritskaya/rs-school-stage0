@@ -36,6 +36,14 @@ body {
 	align-items: center;
 }
 
+.title {
+	margin-bottom: 20px;
+}
+
+.title > h2 {
+	font-size: 40px;
+}
+
 .game {
 	margin-bottom: 30px;
 	display: grid;

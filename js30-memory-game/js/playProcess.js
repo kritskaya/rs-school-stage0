@@ -74,8 +74,8 @@ const unFlip = () => {
 }
 
 const gameOver = () => {
-	alert(`Game over! in ${countSteps} steps
-See your result in a Result Table`);
+	alert(`Игра закончена! за ${countSteps} шагов
+Ваш результат сохранён в таблице Результаты`);
 }
 
 export const generateGame = () => {

@@ -62,7 +62,7 @@ const generateResultsTable = () => {
 		resultRow.append(resultId);
 
 		let resultSteps = document.createElement("span");
-		resultSteps.textContent = results[i].steps + " steps";
+		resultSteps.textContent = results[i].steps + " шагов";
 		resultRow.append(resultSteps);
 
 		let resultTime = document.createElement("span");
@@ -76,7 +76,7 @@ const generateResultsTable = () => {
 		if (results[i].date === lastGameDate) {
 			let lastGame = document.createElement("span");
 			lastGame.classList.add("last-game");
-			lastGame.textContent = "last game";
+			lastGame.textContent = "последняя игра";
 			resultRow.append(lastGame);
 		}
 
@@ -124,9 +124,9 @@ const getTime = (time) => {
 	if (time > 60) {
 		minutes = Math.floor(time / 60);
 		time = time - minutes * 60;
-		minutes += " min ";
+		minutes += " мин ";
 	}
 
-	seconds = ("0" + time).substr(-2, 2) + " s";
+	seconds = ("0" + time).substr(-2, 2) + " с";
 	return minutes ? minutes + ": " + seconds : seconds;
 }
