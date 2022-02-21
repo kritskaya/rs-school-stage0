@@ -130,7 +130,7 @@ body {
 }
 
 .table {
-	width: 500px;
+	width: 520px;
 	height: 600px;
 	padding: 10px; 
 	border: 2px solid #707575;
@@ -151,10 +151,10 @@ body {
 
 
 .data-row {
-	padding: 0px 20px;
+	padding: 0px 15px;
 	border-bottom: 1px solid #0c0d0d;
 	display: grid;
-	grid-template-columns: 25px 100px 120px 160px 1fr;
+	grid-template-columns: 25px 100px 120px 155px 1fr;
 	transition: background-color 0.5s;
 }
 
