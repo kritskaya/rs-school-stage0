@@ -66,7 +66,7 @@ const match = () => {
 			saveResult(countSteps, endGameTime - startGameTime);
 
 		} else {
-			setTimeout(() => matchSnd.play(), 400);
+			setTimeout(() => matchSnd.play(), 500);
 		}
 
 		gameHasFlipped = null;
