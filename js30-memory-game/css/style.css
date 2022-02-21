@@ -91,7 +91,7 @@ body {
 }
 
 .btns {
-	width: 320px;
+	width: 380px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -110,6 +110,17 @@ body {
 .btn:hover,
 .btn:active {
 	border-color: #bddb21;
+}
+
+.btn-volume {
+	width: 50px;
+	height: 50px;
+	/* filter: invert(100%); */
+}
+
+.volume-img {
+	width: 30px;
+	filter: invert(73%) sepia(68%) saturate(504%) hue-rotate(20deg) brightness(99%) contrast(96%);
 }
 
 .results {
