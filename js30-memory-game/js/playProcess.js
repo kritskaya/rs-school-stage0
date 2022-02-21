@@ -4,7 +4,7 @@ import {saveResult} from "./gameResults.js";
 const gameField = document.querySelector(".game");
 const restartBtn = document.querySelector(".restart");
 
-const flipSnd = new Audio("./assets/sounds/keyclick.mp3");
+const flipSnd = new Audio("./assets/sounds/click.mp3");
 const matchSnd = new Audio("./assets/sounds/match.mp3");
 const gameOverSnd = new Audio("./assets/sounds/gameover.mp3");
 
