@@ -122,10 +122,7 @@ body {
 	filter: invert(73%) sepia(68%) saturate(504%) hue-rotate(20deg) brightness(99%) contrast(96%);
 }
 
-.game-over {
-	display: none;
-}
-
+.game-over,
 .results {
 	display: none;
 	background-color: rgba(0, 0, 0, 0.8);
@@ -146,8 +143,8 @@ body {
 
 .table {
 	padding: 10px; 
-	border: 2px solid #707575;
-	outline: 2px solid #000;
+	border: 1px solid #2f3131;
+	outline: 6px solid #191a1a;
 	display: flex;
 	flex-direction: column;
 	background-color: #191a1a;
@@ -170,7 +167,6 @@ body {
 	align-self: center;
 	color: #bddb21;
 }
-
 
 .data-row {
 	padding: 0px 15px;
@@ -198,7 +194,6 @@ body {
 	align-self: center;
 }
 
-
 .close-btn {
 	width: 23px;
 	align-self: end;
@@ -207,7 +202,7 @@ body {
 }
 
 .close-btn:hover {
-	filter: invert(70%);
+	filter: invert(60%);
 }
 
 .footer {

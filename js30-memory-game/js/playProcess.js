@@ -62,7 +62,7 @@ const match = () => {
 			endGameTime = Date.now();
 			gameOverSnd.play();
 			
-			setTimeout(gameOver, 2000);
+			setTimeout(gameOver, 1000);
 			saveResult(countSteps, endGameTime - startGameTime);
 
 		} else {
@@ -74,7 +74,6 @@ const match = () => {
 	} else {
 		setTimeout(unFlip, 700);
 	}
-
 }
 
 const unFlip = () => {
@@ -87,7 +86,7 @@ const unFlip = () => {
 const gameOver = () => {
 	gameOverSection.classList.add("active");
 
-	gameResult.textContent = `За ${countSteps} шаг(ов). Результат сохранёт в таблицу рекордов`;
+	gameResult.textContent = `За ${countSteps} шаг(ов). Результат сохранён в таблицу рекордов`;
 	gameResult.style.textAlign = "center";
 }
 
