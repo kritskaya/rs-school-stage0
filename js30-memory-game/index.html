@@ -6,21 +6,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="icon" href="#">
-	<title>Js30-memory-game</title>
+	<title>JS30-memory-game</title>
 </head>
 <body>
 	<main class="main">
 		<div class="container">
+			<section class="title"><h2>RS School - это:</h2></section>
 			<section class="game">						
 			</section>
 			<section class="btns">
-				<button class="btn restart">Restart Game</button>
-				<button class="btn show-results">Results Table</button>
+				<button class="btn restart">Новая игра</button>
+				<button class="btn show-results">Результаты</button>
+				<button class="btn btn-volume">
+					<img src="./assets/svg/volume.svg" alt="volume button" class="volume-img" title="Выключить звук">
+				</button>
+			</section>
+			<section class="game-over">
+				<div class="table">
+					<img src="./assets//png/close.png" alt="close button" class="close-btn">
+					<div class="caption">Игра закончена!</div>
+					<div class="data"></div>
+				</div>
 			</section>
 			<section class="results">
 				<div class="table">
 					<img src="./assets//png/close.png" alt="close button" class="close-btn">
-					<div class="caption">Last 10 games results:</div>
+					<div class="caption">Результаты последних 10 игр:</div>
 					<div class="data"></div>
 				</div>
 			</section>
@@ -29,7 +40,7 @@
 	<footer class="footer">
 		<div class="year"><span>2022</span></div>
 		<div class="github">
-			<a href="https://github.com/kritskaya">Tatyana Kritskaya</a>
+			<a href="https://github.com/kritskaya">GitHub</a>
 		</div>
 		<div class="rss">
 			<a href="https://rs.school/js-stage0/">

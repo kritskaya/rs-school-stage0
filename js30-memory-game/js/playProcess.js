@@ -3,8 +3,12 @@ import {saveResult} from "./gameResults.js";
 
 const gameField = document.querySelector(".game");
 const restartBtn = document.querySelector(".restart");
+const volumeBtn = document.querySelector(".volume-img");
+const gameOverSection = document.querySelector(".game-over");
+const gameResult = document.querySelector(".game-over .data");
+const closeGameOverBtn = document.querySelector(".game-over .close-btn");
 
-const flipSnd = new Audio("./assets/sounds/keyclick.mp3");
+const flipSnd = new Audio("./assets/sounds/click.mp3");
 const matchSnd = new Audio("./assets/sounds/match.mp3");
 const gameOverSnd = new Audio("./assets/sounds/gameover.mp3");
 
@@ -14,10 +18,17 @@ let countSteps = 0;
 let countFlippedPair = 0;
 let startGameTime;
 let endGameTime;
+let muted = false;
 
 export const subscribeCardClick = () => {
 	gameField.addEventListener("click", flipCard);
 	restartBtn.addEventListener("click", () => document.location.reload());
+}
+
+export const subscribeCloseGameOverBtn = () => {
+	closeGameOverBtn.addEventListener("click", () => {
+		gameOverSection.classList.remove("active");
+	});
 }
 
 function flipCard(event) {
@@ -51,7 +62,7 @@ const match = () => {
 			endGameTime = Date.now();
 			gameOverSnd.play();
 			
-			setTimeout(gameOver, 2500);
+			setTimeout(gameOver, 1000);
 			saveResult(countSteps, endGameTime - startGameTime);
 
 		} else {
@@ -63,7 +74,6 @@ const match = () => {
 	} else {
 		setTimeout(unFlip, 700);
 	}
-
 }
 
 const unFlip = () => {
@@ -74,8 +84,10 @@ const unFlip = () => {
 }
 
 const gameOver = () => {
-	alert(`Game over! in ${countSteps} steps
-See your result in a Result Table`);
+	gameOverSection.classList.add("active");
+
+	gameResult.textContent = `За ${countSteps} шаг(ов). Результат сохранён в таблицу рекордов`;
+	gameResult.style.textAlign = "center";
 }
 
 export const generateGame = () => {
@@ -120,5 +132,21 @@ const insertCell = (card) => {
 
 	gameField.append(cell);
 }
+
+export const subscribeVolumeBtn = () => {
+	volumeBtn.addEventListener("click", () => {
+		flipSnd.muted = !muted;
+		matchSnd.muted = !muted;
+		gameOverSnd.muted = !muted;
+		muted = !muted;
+
+		if (muted) {
+			volumeBtn.src = "./assets/svg/mute.svg";
+		} else {
+			volumeBtn.src = "./assets/svg/volume.svg";
+		}
+	});
+}
+
 
 

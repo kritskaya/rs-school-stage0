@@ -36,6 +36,16 @@ body {
 	align-items: center;
 }
 
+.title {
+	margin-bottom: 20px;
+}
+
+.title > h2 {
+	font-size: 34px;
+	color: #fff;
+	text-shadow: 1px 1px 2px black;
+}
+
 .game {
 	margin-bottom: 30px;
 	display: grid;
@@ -81,7 +91,7 @@ body {
 }
 
 .btns {
-	width: 320px;
+	width: 380px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -102,12 +112,24 @@ body {
 	border-color: #bddb21;
 }
 
+.btn-volume {
+	width: 50px;
+	height: 50px;
+}
+
+.volume-img {
+	width: 30px;
+	filter: invert(73%) sepia(68%) saturate(504%) hue-rotate(20deg) brightness(99%) contrast(96%);
+}
+
+.game-over,
 .results {
 	display: none;
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.results.active {
+.results.active,
+.game-over.active {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -120,16 +142,23 @@ body {
 }
 
 .table {
-	width: 500px;
-	height: 600px;
 	padding: 10px; 
-	border: 2px solid #707575;
-	outline: 2px solid #000;
+	border: 1px solid #2f3131;
+	outline: 6px solid #191a1a;
 	display: flex;
 	flex-direction: column;
 	background-color: #191a1a;
 	color: #fff;
+}
 
+.results .table {
+	width: 520px;
+	height: 600px;
+}
+
+.game-over .table {
+	width: 420px;
+	height: 200px;
 }
 
 .table > .caption {
@@ -139,12 +168,11 @@ body {
 	color: #bddb21;
 }
 
-
 .data-row {
-	padding: 0px 20px;
+	padding: 0px 15px;
 	border-bottom: 1px solid #0c0d0d;
 	display: grid;
-	grid-template-columns: 25px 100px 120px 160px 1fr;
+	grid-template-columns: 25px 100px 120px 155px 1fr;
 	transition: background-color 0.5s;
 }
 
@@ -166,7 +194,6 @@ body {
 	align-self: center;
 }
 
-
 .close-btn {
 	width: 23px;
 	align-self: end;
@@ -175,7 +202,7 @@ body {
 }
 
 .close-btn:hover {
-	filter: invert(70%);
+	filter: invert(60%);
 }
 
 .footer {
